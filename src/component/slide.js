@@ -1,0 +1,101 @@
+import React, { useState, useEffect } from 'react';
+import { Icon } from '@iconify/react';
+import s1 from '../assets/s1.JPG';
+import s2 from '../assets/s2.JPG';
+import s3 from '../assets/s3.JPG';
+
+const Slideshow = () => {
+  const slides = [
+    {
+      image: s1,
+      text: 'Welcome to Emmaus hostel where the art of hospitality meets contemporary luxury',
+      description: 'where impeccable service and attention to detail create a stay beyond compare. Explore our world of refined indulgence and make yourself at home in style.',
+    },
+    {
+      image: s2,
+      text: 'At Emmaus hostel, your arrival marks the beginning of an extraordinary experience',
+      description: 'our dedicated team is committed to ensuring your stay is nothing short of exceptional. Welcome to a place where every detail is tailored to your comfort and enjoyment.',
+    },
+    {
+      image: s3,
+      text: 'Step into a world of refined elegance and warm hospitality at Emmaus hostel',
+      description: 'Your journey begins here, where every moment is crafted to exceed your expectations. Welcome to a sanctuary of luxury and comfort in the heart of Africa.',
+    },
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
+  };
+
+  return (
+    <>
+    <div className="relative w-full h-96 md:h-screen mt-4 flex items-center justify-center">
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute w-full h-full opacity-0 transition-opacity duration-1000 ${
+            index === currentSlide ? 'opacity-100' : ''
+          }`}
+          style={{ backgroundImage: `url(${slide.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        >
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
+            <div className={`text-white text-center font-bold mb-4 ${index === currentSlide ? 'text-lg md:text-xl' : 'text-xl md:text-lg'}`}>{slide.text}</div>
+            <div className="text-white text-center mb-4">{slide.description}</div>
+            <button className="hover:bg-red-950 text-white text-xl font-bold py-2 px-4  absolute left-0 top-1/2 transform -translate-y-1/2 hidden sm:inline-block" onClick={prevSlide}>
+              <Icon icon="ooui:arrow-previous-ltr" />
+            </button>
+            <button className="hover:bg-red-950 text-white text-xl font-bold py-2 px-4  absolute right-0 top-1/2 transform -translate-y-1/2 hidden sm:inline-block" onClick={nextSlide}>
+              <Icon icon="ooui:arrow-next-ltr" />
+            </button>
+            <button className="hover:bg-red-950 text-white font-bold py-2 px-4 border-solid border-2 border-white rounded mt-4" onClick={() => console.log('Book a Room')}>
+              Book a Room
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+
+     <section className="pb-20 bg-blueGray-200 -mt-24 text-white bg-Teal">
+          <div className="container mx-auto px-4 ">
+            <div className="flex flex-wrap">
+              <div className="lg:pt-12 pt-6 w-full px-4 text-center ">
+                <div className="hover:text-white hover:bg-Teal text-Teal relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                  <div className="px-4 py-5 flex-auto">
+              
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <p className='p-4 font-black text-xl text-center'>WELCOME TO</p>
+            <p className='p-4 font-black text-4xl text-center'>EMMAUS HOSTEL</p>
+
+            <p className='p-4 text-justify'>Emmaus hostel  is a hostel located to the entrance of Huye city. located in Huye district in the Eastern province of Rwanda, near Huye stadium, 
+            50 minutes driving from the border of Burundi. Our staff members are always ready to provide friendly, individualized service, 
+            and we are also happy to offer a range of service to meet your needs. 
+            From booking to check out we are ready to make your stay as enjoyable as possible. Our Hotel has 16 bedrooms from single, double, tween, family rooms
+             to meet your needs. Our bar and restaurant offer fresh food with several menu on your choice.</p>
+
+            <p className='p-2'>We're thrilled to have you here. Whether you're staying for a night or longer, we hope you have a wonderful time at our hostel.</p>
+            <p className='p-2'>If you need any assistance or recommendations for exploring the area, feel free to ask our friendly staff. Enjoy your stay!</p>
+          </div>
+        </section>
+        </>
+  );
+};
+
+export default Slideshow;
