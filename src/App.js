@@ -2,6 +2,7 @@ import Navigation from "./component/navigation";
 import Slideshow from "./component/slide";
 import Home from "./component/home";
 import Restorent from "./component/restorent";
+import Rooms from "./component/ourroom";
 
 
 
@@ -13,6 +14,7 @@ function App() {
       <Navigation/>
       <Slideshow />
       <Home />
+      <Rooms />
       <Restorent />
 
       

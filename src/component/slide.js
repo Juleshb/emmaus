@@ -69,18 +69,9 @@ const Slideshow = () => {
       ))}
     </div>
 
-     <section className="pb-20 bg-blueGray-200 -mt-24 text-white bg-Teal">
+     <section className="pb-20 bg-blueGray-200  text-white bg-Teal">
           <div className="container mx-auto px-4 ">
-            <div className="flex flex-wrap">
-              <div className="lg:pt-12 pt-6 w-full px-4 text-center ">
-                <div className="hover:text-white hover:bg-Teal text-Teal relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <div className="px-4 py-5 flex-auto">
-              
-                  </div>
-                </div>
-              </div>
-
-            </div>
+           
             <p className='p-4 font-black text-xl text-center'>WELCOME TO</p>
             <p className='p-4 font-black text-4xl text-center'>EMMAUS HOSTEL</p>
 

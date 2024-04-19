@@ -8,7 +8,9 @@ const restorent =  () => {
   return (
     <div className=" bg-Teal text-white w-full" id="about">
       <div className="grid md:grid-cols-2 gap-8 place-items-center">
-        
+      <div className=" bg-white ">
+          <img src={Restorent} alt="" className="" />
+        </div>
         <div className=" p-4">
         <div className="sm:text-[2.5rem] text-[1.825rem]  font-bold">
           Restorent
@@ -21,9 +23,7 @@ const restorent =  () => {
           DISCOVER
           </button>
         </div>
-        <div className=" bg-white ">
-          <img src={Restorent} alt="" className="" />
-        </div>
+       
       </div>
     </div>
   );
