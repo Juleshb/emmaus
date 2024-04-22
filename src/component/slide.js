@@ -8,17 +8,17 @@ const Slideshow = () => {
   const slides = [
     {
       image: s1,
-      text: 'Welcome to Emmaus hostel where the art of hospitality meets contemporary luxury',
+      text: 'Welcome to Emmaus hostel ',
       description: 'where impeccable service and attention to detail create a stay beyond compare. Explore our world of refined indulgence and make yourself at home in style.',
     },
     {
       image: s2,
-      text: 'At Emmaus hostel, your arrival marks the beginning of an extraordinary experience',
+      text: 'At Emmaus hostel',
       description: 'our dedicated team is committed to ensuring your stay is nothing short of exceptional. Welcome to a place where every detail is tailored to your comfort and enjoyment.',
     },
     {
       image: s3,
-      text: 'Step into a world of refined elegance and warm hospitality at Emmaus hostel',
+      text: 'Warm hospitality at Emmaus hostel',
       description: 'Your journey begins here, where every moment is crafted to exceed your expectations. Welcome to a sanctuary of luxury and comfort in the heart of Africa.',
     },
   ];
@@ -52,16 +52,16 @@ const Slideshow = () => {
           }`}
           style={{ backgroundImage: `url(${slide.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
-            <div className={`text-white text-center font-bold mb-4 ${index === currentSlide ? 'text-lg md:text-xl' : 'text-xl md:text-lg'}`}>{slide.text}</div>
-            <div className="text-white text-center mb-4">{slide.description}</div>
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-r from-Teal bg-opacity-70">
+            <div className={`text-white text-left mt-4 font-bold mb-4 ${index === currentSlide ? 'text-2xl md:text-2xl' : 'text-2xl md:text-2xl'}`}>{slide.text}</div>
+            <div className="text-white text-left font-extralight m-4">{slide.description}</div>
             <button className="hover:bg-red-950 text-white text-xl font-bold py-2 px-4  absolute left-0 top-1/2 transform -translate-y-1/2 hidden sm:inline-block" onClick={prevSlide}>
               <Icon icon="ooui:arrow-previous-ltr" />
             </button>
-            <button className="hover:bg-red-950 text-white text-xl font-bold py-2 px-4  absolute right-0 top-1/2 transform -translate-y-1/2 hidden sm:inline-block" onClick={nextSlide}>
+            <button className="hover:bg-red-950 text-Teal text-xl font-bold py-2 px-4  absolute right-0 top-1/2 transform -translate-y-1/2 hidden sm:inline-block" onClick={nextSlide}>
               <Icon icon="ooui:arrow-next-ltr" />
             </button>
-            <button className="hover:bg-red-950 text-white font-bold py-2 px-4 border-solid border-2 border-white rounded mt-4" onClick={() => console.log('Book a Room')}>
+            <button className="hover:bg-red-950 text-white font-bold py-2 px-4 border-solid border-2 border-white  rounded-full mt-4" onClick={() => console.log('Book a Room')}>
               Book a Room
             </button>
           </div>
