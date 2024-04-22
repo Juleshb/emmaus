@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 import { Icon } from '@iconify/react';
+import logo from '../assets/logo.png'
+const phoneNumber = '+250789028283';
 
 
 const Navigation = () => {
@@ -15,8 +17,22 @@ const Navigation = () => {
     <nav className="bg-colr2 fixed top-0 left-0 w-full z-50 border-b-2 border-Teal">
     <div className="bg-Teal text-white py-1">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-xl font-bold bg-colr2 mt-0 text-Teal  w-1/2"> </div>
-       
+        <div className=" flex space-x-4 m-2"> 
+        <a href={`https://wa.me/${phoneNumber}`} target="_blank" rel="noopener noreferrer" className="flex bg-colr2 hover:bg-green-600 text-Teal py-2 px-4 rounded">
+        <Icon icon="fluent:call-24-regular" /> +250 788 865 736 
+    </a> 
+      
+        <a
+      href={`https://wa.me/${phoneNumber}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-4 right-4 bg-green-500 text-3xl hover:bg-green-600 text-white py-2 px-4 p-6 rounded-full z-10 hover:animate-ping"
+    >
+   
+    <Icon icon="akar-icons:whatsapp-fill" />
+   
+    </a> </div>
+    
         <div className="flex space-x-4 m-2">
           <a href="/tiktok" className="text-white hover:text-gray-400"><Icon icon="mingcute:facebook-fill"/></a>
           <a href="/tiktok" className="text-white hover:text-gray-400"><Icon icon="ri:twitter-x-line" /> </a>
@@ -26,8 +42,9 @@ const Navigation = () => {
       </div>
     </div>
       <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
-        <div className="flex items-center">
-          <a href="/" className="text-Teal font-bold text-lg">Emmaus Hostel</a>
+      <div className="flex items-center">
+      <a href="/" className="text-black flex  text-lg"><img src={logo} alt="Logo" className="h-12 w-12 mr-2" /> {/* Adjust the class to your logo size */}
+       <p className='mt-3'> EMMAUS HOSTEL </p> </a>
         </div>
         <div className="hidden md:flex text-Teal">
           <a href="/" className=" underline hover:underline-offset-8 px-4">Home</a>
