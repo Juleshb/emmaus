@@ -44,7 +44,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
       <div className="flex items-center">
       <a href="/" className="text-black flex  text-lg"><img src={logo} alt="Logo" className="h-12 w-12 mr-2" /> {/* Adjust the class to your logo size */}
-       <p className='mt-3'> EMMAUS HOSTEL </p> </a>
+       <p className='mt-3'>  HOSTEL </p> </a>
         </div>
         <div className="hidden md:flex text-Teal">
           <a href="/" className=" underline hover:underline-offset-8 px-4">Home</a>
