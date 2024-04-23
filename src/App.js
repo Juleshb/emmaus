@@ -3,19 +3,24 @@ import Slideshow from "./component/slide";
 import Home from "./component/home";
 import Restorent from "./component/restorent";
 import Rooms from "./component/ourroom";
+import Conferancehall from "./component/conferancehall";
+import Facilities from "./component/facilities";
+
 
 
 
 function App() {
 
   return (
-    <div className="font-Poppins bg-white">
+    <div className="font-Poppins bg-colr2">
      
       <Navigation/>
       <Slideshow />
       <Home />
       <Rooms />
+      <Facilities />
       <Restorent />
+      <Conferancehall />
 
       
     </div>
