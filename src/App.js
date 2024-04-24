@@ -5,7 +5,7 @@ import Restorent from "./component/restorent";
 import Rooms from "./component/ourroom";
 import Conferancehall from "./component/conferancehall";
 import Facilities from "./component/facilities";
-
+import Contact from "./component/contact";
 
 
 
@@ -17,10 +17,17 @@ function App() {
       <Navigation/>
       <Slideshow />
       <Home />
-      <Rooms />
       <Facilities />
+      <Rooms />
+     
       <Restorent />
       <Conferancehall />
+     
+     
+      
+      <Contact />
+      
+      
 
       
     </div>

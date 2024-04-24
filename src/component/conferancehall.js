@@ -37,7 +37,8 @@ const Slideshow = () => {
   }, [slides.length]);
 
   return (
-    <div className="relative w-full">
+    <div className=''>
+    <div className="relative w-full h-screen">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -45,7 +46,7 @@ const Slideshow = () => {
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <div className="grid md:grid-cols-2 gap-8 place-items-center h-full">
+          <div className="grid md:grid-cols-2  place-items-center h-full">
             <div className="p-4 flex flex-col justify-center">
               <div className="sm:text-[2.5rem] text-[1.825rem]  font-bold mb-4">
                 {slide.title}
@@ -75,6 +76,7 @@ const Slideshow = () => {
 
      
     </div>
+    </div> 
   );
 };
 
