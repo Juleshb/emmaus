@@ -6,6 +6,7 @@ import Rooms from "./component/ourroom";
 import Conferancehall from "./component/conferancehall";
 import Facilities from "./component/facilities";
 import Contact from "./component/contact";
+import Footer from "./component/footer";
 
 
 
@@ -22,10 +23,11 @@ function App() {
      
       <Restorent />
       <Conferancehall />
+      <Contact />
+      <Footer />
      
      
       
-      <Contact />
       
       
 
