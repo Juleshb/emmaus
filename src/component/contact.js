@@ -7,7 +7,7 @@ const contact = () => {
 
   return (
 <>
-<div className="relative flex -mt-40 content-center items-center justify-center " id="contactus">
+<div className="relative flex -mt-40 content-center items-center justify-center " id="contact">
           <div
            className="absolute top-18 w-full h-full bg-center bg-cover bg-fixed"
            style={{
@@ -39,11 +39,11 @@ const contact = () => {
     
     <Icon icon="clarity:email-line" width="30" />
     
-      <h2 className="  font-light ml-5  tracking-wide md:text-center xs:text-center ">info@crt.rw</h2>
+      <h2 className="  font-light ml-5  tracking-wide md:text-center xs:text-center ">emmaushostel@gmail.com</h2>
     </div>
     <div className="flex ml-5 mt-5">
       <Icon icon="fluent:call-24-regular" width="30" />
-      <h2 className=" ml-5  font-light tracking-wide md:text-center xs:text-center ">+250-785-599-926</h2>
+      <h2 className=" ml-5  font-light tracking-wide md:text-center xs:text-center ">+250 788 865 736 / +250 787 172 920</h2>
     </div>
           </div>
        
@@ -66,7 +66,7 @@ const contact = () => {
         </div>
         
         <button type="submit" className="mt-4 px-4 py-3 bg-white text-Teal hover:bg-Teal hover:opacity-50 hover:text-white border hover:border-white border-Teal focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 items-center text-center flex">
-      <i className='mr-2'><Icon icon="grommet-icons:send" /></i> Submit
+      <i className='mr-2'><Icon icon="grommet-icons:send" /></i> Send
       </button>
           
       </div>

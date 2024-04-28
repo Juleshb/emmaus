@@ -47,7 +47,7 @@ const SlideShow = () => {
   }, [currentSlide]);
 
   return (
-    <div className="relative ">
+    <div className="relative " >
       <button className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-xl text-Teal px-4 py-2 rounded-full" onClick={goToPrevSlide}>
       <Icon icon="line-md:chevron-small-left" />
       </button>

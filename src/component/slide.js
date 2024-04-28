@@ -43,7 +43,7 @@ const Slideshow = () => {
 
   return (
     <>
-    <div className="relative w-full h-96 md:h-screen mt-4 flex items-center justify-center">
+    <div className="relative w-full h-96 md:h-screen mt-4 flex items-center justify-center" id="home">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -69,13 +69,13 @@ const Slideshow = () => {
       ))}
     </div>
 
-     <section className="pb-20 bg-blueGray-200  text-white bg-Teal">
+     <section className="pb-20 bg-blueGray-200  text-white bg-Teal" id="about">
           <div className="container mx-auto px-4 ">
            
             <p className='p-4 font-black text-xl text-center'>WELCOME TO</p>
             <p className='p-4 font-black text-4xl text-center'>EMMAUS HOSTEL</p>
 
-            <p className='p-4 text-justify'>Emmaus hostel  is a hostel located to the entrance of Huye city. located in Huye district in the Eastern province of Rwanda, near Huye stadium, 
+            <p className='p-4 text-justify'>Emmaus hostel  is a hostel located to the entrance of Huye city. located in Huye district in the Southern province of Rwanda, near Huye stadium, 
             50 minutes driving from the border of Burundi. Our staff members are always ready to provide friendly, individualized service, 
             and we are also happy to offer a range of service to meet your needs. 
             From booking to check out we are ready to make your stay as enjoyable as possible. Our Hotel has 16 bedrooms from single, double, tween, family rooms

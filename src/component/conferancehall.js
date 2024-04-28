@@ -37,7 +37,7 @@ const Slideshow = () => {
   }, [slides.length]);
 
   return (
-    <div className=''>
+    <div className='' id="conferancehall">
     <div className="relative w-full h-screen">
       {slides.map((slide, index) => (
         <div

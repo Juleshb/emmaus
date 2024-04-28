@@ -47,11 +47,11 @@ const Navigation = () => {
        <p className='mt-3'> EMMAUS HOSTEL </p> </a>
         </div>
         <div className="hidden md:flex text-Teal">
-          <a href="/" className=" underline hover:underline-offset-8 px-4">Home</a>
-          <a href="/rooms" className="underline hover:underline-offset-8 px-4">Rooms</a>
-          <a href="/conferancehall" className=" underline hover:underline-offset-8 px-4">Conferance Hall</a>
-          <a href="/about" className=" underline hover:underline-offset-8 px-4">About</a>
-          <a href="/contact" className=" underline hover:underline-offset-8 px-4">Contact</a>
+          <a href="#home" className=" underline hover:underline-offset-8 px-4">Home</a>
+          <a href="#about" className=" underline hover:underline-offset-8 px-4">About</a>
+          <a href="#rooms" className="underline hover:underline-offset-8 px-4">Rooms</a>
+          <a href="#conferancehall" className=" underline hover:underline-offset-8 px-4">Conferance Hall</a>
+          <a href="#contact" className=" underline hover:underline-offset-8 px-4">Contact</a>
          
         </div>
         <div className="flex md:hidden">
@@ -72,11 +72,11 @@ const Navigation = () => {
             </button> */}
           </div>
           <div className="flex flex-col items-center">
-            <a href="/" className="underline hover:underline-offset-8 py-2 px-4">Home</a>
-            <a href="/rooms" className="underline hover:underline-offset-8 py-2 px-4">Rooms</a>
-             <a href="/conferancehall" className=" underline hover:underline-offset-8 px-4">Conferance Hall</a>
-            <a href="/about" className="underline hover:underline-offset-8 py-2 px-4">About</a>
-            <a href="/contact" className="underline hover:underline-offset-8 py-2 px-4">Contact</a>
+          <a href="#home" className=" underline hover:underline-offset-8 px-4">Home</a>
+          <a href="#about" className=" underline hover:underline-offset-8 px-4">About</a>
+          <a href="#rooms" className="underline hover:underline-offset-8 px-4">Rooms</a>
+          <a href="#conferancehall" className=" underline hover:underline-offset-8 px-4">Conferance Hall</a>
+          <a href="#contact" className=" underline hover:underline-offset-8 px-4">Contact</a>
           </div>
         </div>
       )}
