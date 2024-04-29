@@ -1,69 +1,71 @@
-
-// const Footer = () => {
-//   return (
-//     <footer className="bg-Teal py-4">
-//       <div className="container mx-auto text-center text-white">
-//         <p>&copy; 2023 <a href="https://jules-hb-250.netlify.app/" className="underline">by HB-Lab</a> All Rights Reserved.</p>
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
-
-
+import React from "react";
 import { Icon } from '@iconify/react';
+import { motion } from "framer-motion";
 
-
-function Footer() {
+const Footer = () => {
   return (
-    <div>
-      <footer className="bg-Teal sm:text-sm text-ceneter px-5 sm:px-0 lg:px-8">
-      
-        <div className="flex justify-around p-10 ">
-          <div className="text-white flex flex-col space-y-4 items-center sm:hidden xs:hidden">
-            <div className="">
-            <Icon icon="el:map-marker" width="36" />
-            </div>
-           <div className=" flex flex-col items-center space-y-4 ">
-           <h3>Kigali, Rwanda</h3>
-            <h3>KN 20 Ave</h3>
-           </div>
+    <motion.div
+      initial={{ height: 0 }}
+      whileInView={{ height: "auto" }}
+      transition={{ duration: 1 }}
+      className="bg-Teal p-10"
+    >
+      <div className="grid md:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 place-items-start gap-8 text-white">
+        <div>
+          <div className="font-bold mb-6">ABOUT ME</div>
+          <p className="text-sm leading-7">
+          I am software Developer, I am interested in back-end & front-end. I am Product Designer with 5 years experience, focusing in User Interface and User Experience. I am also a proud dog dad, and a board game enthusiast.
+          </p>
+        </div>
+        <div>
+          <div className="font-bold mb-6">SERVICES</div>
+          <div className="flex flex-col gap-4">
+            <a href="/" className="text-sm hover:underline">
+              Web Design
+            </a>
+            <a href="/" className="text-sm hover:underline">
+              Web Development
+            </a>
+            <a href="/" className="text-sm hover:underline">
+              {" "}
+              Science
+            </a>
+            <a href="/" className="text-sm hover:underline">
+              Digital Marketing
+            </a>
+          </div>
+        </div>
+        <div>
+          <div className="font-bold mb-6">LOCATION</div>
+          <div className="flex flex-col gap-4">
+
+          <div className="text-sm">Kigali, Rwanda</div>
             
           </div>
-          <div className="text-white flex flex-col space-y-4 items-center xs:text-sm">
-            <div className="">
-            <h3>Follow Us to Get Updates !</h3>
-            </div>
-          
-            <div className=" flex mt-3 space-x-4 space-y-1 items-center">
-            <a href="/" className=" hover:text-blue-700">
-            <Icon icon="line-md:facebook" width="36" /></a>
-            <a href="/" className=" hover:text-blue-700">
-            <Icon icon="line-md:twitter-x-alt" width="36" /></a>
-            <a href="/" className=" hover:text-blue-700">
-            <Icon icon="line-md:aedin" width="36" /></a>
-            <a href="/" className=" hover:text-blue-700">
-            <Icon icon="line-md:github-loop" width="36" /></a>
-          
-            </div>
-             
-
-          </div>
-          <div className="text-white flex flex-col space-y-4 items-center sm:hidden xs:hidden">
-            <h3>Terms of Services</h3>
-            <h3>Privacy Policy</h3>
-            <h3>FAQ</h3>
+        </div>
+        <div>
+          <div className="font-bold mb-6">Follow Me</div>
+          <div className="text-sm mb-4">habaruremajules@gmail.com</div>
+          <div className="text-sm">+250-789-028-283</div>
+          <div className="text-sm">+250-792-445-913</div>
+          <div className="flex gap-4 mt-4">
+            <a href="/" className="hover:scale-110 text-xl">
+            <Icon icon="gg:facebook" />
+            </a>
+            <a href="/" className="hover:scale-110 text-xl">
+            <Icon icon="uil:instagram" />
+            </a>
+            <a href="/" className="hover:scale-110 text-xl">
+            <Icon icon="pajamas:twitter" />
+            </a>
+            <a href="/" className="hover:scale-110 text-xl">
+            <Icon icon="teenyicons:pinterest-solid" />
+            </a>
           </div>
         </div>
+      </div>
+    </motion.div>
+  );
+};
 
-        <div className='bg-Teal'> 
-
-          <h2 className="text-center text-white text-md pb-4 sm:text-sm"><span>&copy; All Rights Reserved by <a href="https://jules-hb-250.netlify.app/" className="underline"> Hb-Lab</a> 2024.</span> </h2> 
-
-        </div>
-      </footer>
-    </div>
-  )
-}
 export default Footer;

@@ -1,11 +1,16 @@
 import { Icon } from '@iconify/react';
+import { motion } from "framer-motion";
 
 
 const facilities = () => {
 
 
   return (
-<>
+    <motion.div
+    initial={{ height: 0 }}
+    whileInView={{ height: "auto" }}
+    transition={{ duration: 1 }}
+  >
    
 <div className="flex flex-wrap bg-colr2 w-full mb-8  rounded-t-lg">
                  <div className="w-full md:w-4/12 px-4 text-center">
@@ -52,7 +57,7 @@ const facilities = () => {
                 </div>
               </div>
             </div>
-    </>
+            </motion.div>
   );
 };
 
