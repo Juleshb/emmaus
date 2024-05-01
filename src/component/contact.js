@@ -44,15 +44,15 @@ const contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="col-span-1">
               <label htmlFor="lastName" className="block text-sm font-medium ">Names</label>
-              <input type="text" name="lastName" id="lastName" className="mt-1 p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required />
+              <input type="text" name="lastName" id="lastName" className="mt-1 text-black p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required />
             </div>
             <div className="col-span-1">
               <label htmlFor="email" className="block text-sm font-medium ">Email</label>
-              <input type="email" name="email" id="email" className="mt-1 p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required />
+              <input type="email" name="email" id="email" className="mt-1 text-black p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required />
             </div>
             <div className="col-span-1">
               <label htmlFor="message" className="block text-sm font-medium ">Message</label>
-              <textarea name="message" id="message" className="mt-1 p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required />
+              <textarea name="message" id="message" className="mt-1 text-black p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required />
             </div>
           </div>
 
