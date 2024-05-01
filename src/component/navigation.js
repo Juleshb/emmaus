@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Icon } from '@iconify/react';
 import logo from '../assets/logo.png'
-const phoneNumber = '+250789028283';
+const phoneNumber = '+250788865736';
 
 
 const Navigation = () => {
