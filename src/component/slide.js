@@ -78,7 +78,7 @@ const Slideshow = () => {
             <p className='p-4 text-justify'>Emmaus hostel  is a hostel located to the entrance of Huye city. located in Huye district in the Southern province of Rwanda, near Huye stadium, 
             50 minutes driving from the border of Burundi. Our staff members are always ready to provide friendly, individualized service, 
             and we are also happy to offer a range of service to meet your needs. 
-            From booking to check out we are ready to make your stay as enjoyable as possible. Our Hotel has 16 bedrooms from single, double, tween, family rooms
+            From booking to check out we are ready to make your stay as enjoyable as possible. Our hostel has single standard rooms, double standard rooms and twin rooms, conferancehall and bar-restaurant
              to meet your needs. Our bar and restaurant offer fresh food with several menu on your choice.</p>
 
             <p className='p-2'>We're thrilled to have you here. Whether you're staying for a night or longer, we hope you have a wonderful time at our hostel.</p>
