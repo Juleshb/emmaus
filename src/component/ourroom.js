@@ -1,6 +1,6 @@
 
-import bg1 from "../assets/ZW8A9610.JPG"
-import bg2 from "../assets/ZW8A9585.JPG"
+import bg1 from "../assets/ZW8A9585.JPG"
+import bg2 from "../assets/double.webp"
 import bg3 from "../assets/ZW8A9613.JPG"
 
 
