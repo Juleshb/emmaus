@@ -8,19 +8,19 @@ const Slideshow = () => {
   const slides = [
     {
       image: RestorentImage,
-      title: 'Conference Hall',
+      title: 'Meeting & Events',
       description: 'Welcome to our prestigious Conference Hall, where professionalism and comfort converge to create the ideal setting for your gatherings. Experience unparalleled service and top-notch amenities as you host your events with us.',
       subDescription: 'Our Conference Hall boasts cutting-edge technology and flexible layouts, ensuring seamless execution for meetings, conferences, seminars, and more. Elevate your events with our tailored solutions and attention to detail.',
     },
     {
       image: Image1,
-      title: 'Conference Hall',
+      title: 'Meeting & Events',
       description: 'Host your next event in our elegant Conference Hall, where sophistication meets functionality. Our state-of-the-art facilities and impeccable service ensure a successful and memorable experience for all attendees.',
       subDescription: 'Equipped with modern audiovisual equipment and customizable seating arrangements, our Conference Hall is perfect for meetings, seminars, workshops, and corporate events of all sizes. Let us exceed your expectations and elevate your event to new heights.',
     },
     {
       image: Image2,
-      title: 'Conference Hall',
+      title: 'Meeting & Events',
       description: 'Step into our refined Conference Hall, where elegance and functionality blend seamlessly to provide a sophisticated environment for your events. Discover a space designed to inspire productivity and collaboration.',
       subDescription: 'With its contemporary design and advanced facilities, our Conference Hall caters to a wide range of events, from corporate meetings to networking sessions. Let us help you create memorable experiences for your guests.',
     },
