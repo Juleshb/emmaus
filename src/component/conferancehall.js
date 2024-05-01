@@ -38,11 +38,7 @@ const Slideshow = () => {
   }, [slides.length]);
 
   return (
-    <motion.div
-    initial={{ height: 0 }}
-    whileInView={{ height: "auto" }}
-    transition={{ duration: 1 }}
-  >
+ <>
     <div className='' id="conferancehall">
     <div className="relative w-full h-screen">
       {slides.map((slide, index) => (
@@ -83,7 +79,7 @@ const Slideshow = () => {
      
     </div>
     </div> 
-    </motion.div>
+    </>
   );
 };
 
