@@ -32,14 +32,14 @@ const Home = () => {
           <p className="text-sm leading-7 text-gray max-w-sm">
           We're thrilled to have you here. Whether you're staying for a night or longer, we hope you have a wonderful time at our hostel.
           </p>
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <button className="px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm">
               Be part of us
             </button>
             <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
               Read more
             </button>
-          </div>
+          </div> */}
         </div>
        
       </div>

@@ -12,26 +12,23 @@ const Footer = () => {
     >
       <div className="grid md:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 place-items-start gap-8 text-white">
         <div>
-          <div className="font-bold mb-6">ABOUT ME</div>
+          <div className="font-bold mb-6"></div>
           <p className="text-sm leading-7">
-          I am software Developer, I am interested in back-end & front-end. I am Product Designer with 5 years experience, focusing in User Interface and User Experience. I am also a proud dog dad, and a board game enthusiast.
+          If you need any assistance or recommendations for exploring the area, feel free to ask our friendly staff. Enjoy your stay!
           </p>
         </div>
         <div>
           <div className="font-bold mb-6">SERVICES</div>
           <div className="flex flex-col gap-4">
             <a href="/" className="text-sm hover:underline">
-              Web Design
+              Rooms ACCOMMODATION
             </a>
             <a href="/" className="text-sm hover:underline">
-              Web Development
+              Restorent
             </a>
+           
             <a href="/" className="text-sm hover:underline">
-              {" "}
-              Science
-            </a>
-            <a href="/" className="text-sm hover:underline">
-              Digital Marketing
+              Conferance hall
             </a>
           </div>
         </div>
@@ -39,15 +36,15 @@ const Footer = () => {
           <div className="font-bold mb-6">LOCATION</div>
           <div className="flex flex-col gap-4">
 
-          <div className="text-sm">Kigali, Rwanda</div>
+          <div className="text-sm">Butare, Rwanda</div>
             
           </div>
         </div>
         <div>
-          <div className="font-bold mb-6">Follow Me</div>
-          <div className="text-sm mb-4">habaruremajules@gmail.com</div>
-          <div className="text-sm">+250-789-028-283</div>
-          <div className="text-sm">+250-792-445-913</div>
+          <div className="font-bold mb-6">For More Info:</div>
+          <div className="text-sm mb-4">Email: emmaushostel@gmail.com</div>
+          <div className="text-sm">Call phone: +250 787 172 920</div>
+          <div className="text-sm">Whatsapp number: +250 788 865 736</div>
           <div className="flex gap-4 mt-4">
             <a href="/" className="hover:scale-110 text-xl">
             <Icon icon="gg:facebook" />

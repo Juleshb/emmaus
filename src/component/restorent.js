@@ -19,9 +19,9 @@ const restorent =  () => {
           Offering unrivaled quality and impeccably high-standards (with regards to both the menu and the service).</p>
           <p className="text-sm  leading-7 mb-4">
           The menu offers an excellent selection of expertly prepared Rwandan, African and internationally dishes to suit your choice .</p>
-          <button className="py-3 px-6 text-sm border border-solid border-white rounded-lg font-bold">
+          {/* <button className="py-3 px-6 text-sm border border-solid border-white rounded-lg font-bold">
           DISCOVER
-          </button>
+          </button> */}
         </div>
        
       </div>

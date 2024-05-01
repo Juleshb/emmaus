@@ -1,5 +1,7 @@
 
-import bg1 from "../assets/ZW8A9613.JPG"
+import bg1 from "../assets/single.webp"
+import bg2 from "../assets/double.webp"
+import bg3 from "../assets/twin.webp"
 
 
 
@@ -53,9 +55,9 @@ const rooms = () => {
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center transition-all duration-1000 ease-in-out transform scale-100 hover:scale-105">
             <div className="hover:text-white bg-white  rounded-lg  hover:bg-Teal text-Teal relative flex flex-col min-w-0 break-words  w-full mb-8 ">
                   
-                  <img className="w-full h-full object-cover rounded-t-lg" src={bg1} alt="Service" />
+                  <img className="w-full h-full object-cover rounded-t-lg" src={bg2} alt="Service" />
                   <div className="px-4 py-5 flex-auto">
-                    <h6 className="text-base  font-semibold">Single standard Room 35$ / Night</h6>
+                    <h6 className="text-base  font-semibold">Double Standard Room 40$ / Night</h6>
                     <p className="mt-2 mb-4 ">
                     Breakfast, free internet, parking & security, towel,and hot water.
                     </p>
@@ -73,9 +75,9 @@ const rooms = () => {
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center transition-all duration-1000 ease-in-out transform scale-100 hover:scale-105">
             <div className="hover:text-white bg-white  rounded-lg  hover:bg-Teal text-Teal relative flex flex-col min-w-0 break-words  w-full mb-8 ">
                   
-                  <img className="w-full h-full object-cover rounded-t-lg" src={bg1} alt="Service" />
+                  <img className="w-full h-full object-cover rounded-t-lg" src={bg3} alt="Service" />
                   <div className="px-4 py-5 flex-auto">
-                    <h6 className="text-base  font-semibold">Single standard Room 35$ / Night</h6>
+                    <h6 className="text-base  font-semibold">Twin Room 45$ / Night</h6>
                     <p className="mt-2 mb-4 ">
                     Breakfast, free internet, parking & security, towel,and hot water.
                     </p>
