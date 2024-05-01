@@ -7,6 +7,7 @@ import Conferancehall from "./component/conferancehall";
 import Facilities from "./component/facilities";
 import Contact from "./component/contact";
 import Footer from "./component/footer";
+import Halls from "./component/ourhall";
 
 
 
@@ -23,6 +24,7 @@ function App() {
      
       <Restorent />
       <Conferancehall />
+      <Halls />
       <Contact />
       <Footer />
      

@@ -6,7 +6,7 @@ import 'leaflet/dist/leaflet.css';
 const contact = () => {
   return (
     <>
-      <div className="relative flex -mt-40 content-center items-center justify-center " id="contact">
+      <div className="relative flex  content-center items-center justify-center " id="contact">
         <div
           className="absolute top-18 w-full h-full bg-center bg-cover bg-fixed"
           style={{

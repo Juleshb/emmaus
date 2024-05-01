@@ -21,14 +21,14 @@ const Footer = () => {
           <div className="font-bold mb-6">SERVICES</div>
           <div className="flex flex-col gap-4">
             <a href="/" className="text-sm hover:underline">
-              Rooms ACCOMMODATION
+              ROOMS ACCOMMODATION
             </a>
             <a href="/" className="text-sm hover:underline">
-              Restorent
+            RESTAURANTS
             </a>
            
             <a href="/" className="text-sm hover:underline">
-              Conferance hall
+            MEETING ROOMS
             </a>
           </div>
         </div>

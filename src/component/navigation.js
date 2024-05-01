@@ -50,7 +50,7 @@ const Navigation = () => {
           <a href="#home" className=" underline hover:underline-offset-8 px-4">Home</a>
           <a href="#about" className=" underline hover:underline-offset-8 px-4">About</a>
           <a href="#rooms" className="underline hover:underline-offset-8 px-4">Rooms</a>
-          <a href="#conferancehall" className=" underline hover:underline-offset-8 px-4">Conferance Hall</a>
+          <a href="#conferancehall" className=" underline hover:underline-offset-8 px-4">Meeting & Events</a>
           <a href="#contact" className=" underline hover:underline-offset-8 px-4">Contact</a>
          
         </div>
@@ -75,7 +75,7 @@ const Navigation = () => {
           <a href="#home" className=" underline hover:underline-offset-8 px-4">Home</a>
           <a href="#about" className=" underline hover:underline-offset-8 px-4">About</a>
           <a href="#rooms" className="underline hover:underline-offset-8 px-4">Rooms</a>
-          <a href="#conferancehall" className=" underline hover:underline-offset-8 px-4">Conferance Hall</a>
+          <a href="#conferancehall" className=" underline hover:underline-offset-8 px-4">Meeting & Events</a>
           <a href="#contact" className=" underline hover:underline-offset-8 px-4">Contact</a>
           </div>
         </div>
