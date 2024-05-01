@@ -64,9 +64,9 @@ const contact = () => {
                   <div className="md:w-1/2 md:pr-8">
                     <div style={{ width: '100%', height: '400px' }}>
                       <MapContainer center={[-2.59499,29.74514]} zoom={20} style={{ height: '100%', width: '100%' }}>
-                      <TileLayer
-                          attribution='&copy; <a href="https://www.esri.com">Esri</a>'
-                          url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+                        <TileLayer
+                          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         <Marker position={[-2.59480, 29.74382]}>
                           <Popup>
