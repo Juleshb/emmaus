@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Slide from './roomslide';
-import image1 from "../assets/twin.webp";
-import image2 from "../assets/single.webp";
+import image1 from "../assets/ZW8A9610.JPG";
+import image2 from "../assets/ZW8A9585.JPG";
 import image3 from "../assets/ZW8A9595.JPG";
 import image4 from "../assets/ZW8A9587.JPG";
-import image5 from "../assets/double.webp";
+import image5 from "../assets/ZW8A9613.JPG";
 import { Icon } from '@iconify/react';
 
 const slides = [
