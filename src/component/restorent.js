@@ -13,7 +13,7 @@ const restorent =  () => {
         </div>
         <div className=" p-4">
         <div className="sm:text-[2.5rem] text-[1.825rem]  font-bold">
-          Restorent
+        Restaurant
           </div>
           <p className="text-sm  leading-7 mb-4">
           Offering unrivaled quality and impeccably high-standards (with regards to both the menu and the service).</p>

@@ -36,7 +36,7 @@ const rooms = () => {
                   
                   <img className="w-full h-full object-cover rounded-t-lg  " src={bg1} alt="Service" />
                   <div className="px-4 py-5 flex-auto">
-                    <h6 className="text-base  font-semibold">Single standard Room 35$ / Night</h6>
+                    <h6 className="text-base  font-semibold">Single standard Room </h6>
                     <p className="mt-2 mb-4 ">
                     Breakfast, free internet, parking & security, towel,and hot water.
                     </p>
@@ -57,7 +57,7 @@ const rooms = () => {
                   
                   <img className="w-full h-full object-cover rounded-t-lg" src={bg2} alt="Service" />
                   <div className="px-4 py-5 flex-auto">
-                    <h6 className="text-base  font-semibold">Double Standard Room 40$ / Night</h6>
+                    <h6 className="text-base  font-semibold">Double Standard Room </h6>
                     <p className="mt-2 mb-4 ">
                     Breakfast, free internet, parking & security, towel,and hot water.
                     </p>
@@ -77,7 +77,7 @@ const rooms = () => {
                   
                   <img className="w-full h-full object-cover rounded-t-lg" src={bg3} alt="Service" />
                   <div className="px-4 py-5 flex-auto">
-                    <h6 className="text-base  font-semibold">Twin Room 45$ / Night</h6>
+                    <h6 className="text-base  font-semibold">Twin Room </h6>
                     <p className="mt-2 mb-4 ">
                     Breakfast, free internet, parking & security, towel,and hot water.
                     </p>
