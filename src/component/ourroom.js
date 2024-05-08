@@ -29,10 +29,12 @@ const Rooms = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
+    console.log('Form Data:', bookingData); // Log the form data
+  
     // Define the URL of the API endpoint
-    const apiUrl = 'https://emmausbe.onrender.com/submit-form';
-
+    const apiUrl = 'http://localhost:4700/submit-form';
+  
     // Define the data to send to the API
     const formData = new FormData();
     formData.append('name', bookingData.name);
@@ -40,7 +42,7 @@ const Rooms = () => {
     formData.append('phone', bookingData.phone);
     formData.append('checkInDate', bookingData.checkInDate);
     formData.append('checkOutDate', bookingData.checkOutDate);
-
+  
     // Make a POST request to the API endpoint
     fetch(apiUrl, {
       method: 'POST',
@@ -50,17 +52,14 @@ const Rooms = () => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      return response.json();
-    })
-    .then(data => {
-      console.log('API Response:', data);
-      // Handle the API response here
+      console.log('Form submitted successfully.');
     })
     .catch(error => {
       console.error('Error:', error);
       // Handle errors here
     });
-
+    
+  
     // Reset the form data
     setBookingData({
       name: '',
@@ -69,10 +68,11 @@ const Rooms = () => {
       checkInDate: '',
       checkOutDate: ''
     });
-
+  
     // Close the popup
     setShowPopup(false);
   };
+  
 
   return (
     <>
