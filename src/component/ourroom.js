@@ -6,6 +6,7 @@ import { Icon } from '@iconify/react';
 
 const Rooms = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [sucsessPopup, setsucsessPopup] = useState(false);
   const [bookingData, setBookingData] = useState({
     name: '',
     email: '',
@@ -20,6 +21,10 @@ const Rooms = () => {
 
   const handleBookNowClick = () => {
     setShowPopup(true);
+  };
+
+  const handleClosesucsessPopup = () => {
+    setsucsessPopup(false);
   };
 
   const handleClosePopup = () => {
@@ -83,6 +88,7 @@ const Rooms = () => {
   
     // Close the popup
     setShowPopup(false);
+    setsucsessPopup(true);
   };
   
 
@@ -98,7 +104,7 @@ const Rooms = () => {
                   <div className="px-4 py-5 flex-auto">
                     <h6 className="text-base font-semibold">Single standard Room </h6>
                     <p className="mt-2 mb-4">Breakfast, free internet, parking & security, towel,and hot water.</p>
-                    <button onClick={handleBookNowClick} className="px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm">
+                    <button onClick={handleBookNowClick} className="px-6 py-3 font-bold border border-solid border-white text-white bg-Teal rounded-lg mr-4 text-sm">
                       Book Now
                     </button>
                     <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
@@ -114,7 +120,7 @@ const Rooms = () => {
                   <div className="px-4 py-5 flex-auto">
                     <h6 className="text-base font-semibold">Double Standard Room </h6>
                     <p className="mt-2 mb-4">Breakfast, free internet, parking & security, towel,and hot water.</p>
-                    <button onClick={handleBookNowClick} className="px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm">
+                    <button onClick={handleBookNowClick} className="px-6 py-3 font-bold border border-solid border-white text-white bg-Teal rounded-lg mr-4 text-sm">
                       Book Now
                     </button>
                     <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
@@ -130,7 +136,7 @@ const Rooms = () => {
                   <div className="px-4 py-5 flex-auto">
                     <h6 className="text-base font-semibold">Twin Room </h6>
                     <p className="mt-2 mb-4">Breakfast, free internet, parking & security, towel,and hot water.</p>
-                    <button onClick={handleBookNowClick} className="px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm">
+                    <button onClick={handleBookNowClick} className="px-6 py-3 font-bold border border-solid border-white text-white bg-Teal rounded-lg mr-4 text-sm">
                       Book Now
                     </button>
                     <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
@@ -197,12 +203,12 @@ const Rooms = () => {
                     </div>
                     <div className="mb-4">
                    <label htmlFor="otherRequest" className="block text-gray-700 text-sm font-bold mb-2">Other request</label>
-                   <textarea id="otherRequest" name="otherRequest" value={bookingData.otherRequest} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required />
+                   <textarea id="otherRequest" name="otherRequest" value={bookingData.otherRequest} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" />
                    </div>
 
 
 
-                    <div className="flex justify-end">
+                    <div className="flex justify-center">
                       <button onClick={handleClosePopup} className="px-4 py-2 bg-orange-600 text-white rounded-lg mr-2">Cancel</button>
                       <button type="submit" className="px-4 py-2 bg-Teal text-white rounded-lg">Book</button>
                     </div>
@@ -212,6 +218,32 @@ const Rooms = () => {
           </div>
         </div> 
             )}
+
+            {sucsessPopup && (
+              <div className="fixed m-4 mt-8 inset-0 z-50 flex  justify-center overflow-y-auto ">
+              <div className='items-center'>
+          <div className="bg-green-100 p-6 rounded-lg  shadow-xl border-dotted border-2 border-green-400 ">
+            
+            <div className="text-Teal text-9xl text-center inline-flex items-center justify-center w-12 h-12 mb-2 ">
+            <Icon icon="line-md:bell-twotone-loop" />
+                    </div>
+            <h2 className="text-2xl text-green-700 font-bold mb-4  ">Your reservation has well received</h2>
+            <p className='text-green-900'>We will get back to you soon for confirming your reservation. Thanks for booking with us!</p>
+            <div className="max-w-sm mx-auto  px-8 pt-6 pb-8 mb-4">
+
+
+            <div className="flex justify-center ">
+                      <button onClick={handleClosesucsessPopup} className="text-xl px-4 py-2 bg-green-400 text-white rounded-lg mr-2 items-center flex">
+                      <i className="mr-2"><Icon icon="line-md:confirm-circle" /></i>OK</button>
+                    
+                    </div>
+            
+            </div>
+          </div>
+          </div>
+        </div> 
+            )}
+
           </div>
         </section>
       </main>
