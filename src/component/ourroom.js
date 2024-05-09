@@ -142,7 +142,8 @@ const Rooms = () => {
             </div>
 
             {showPopup && (
-              <div className="fixed mt-8 inset-0 z-50 flex justify-center overflow-y-auto ">
+              <div className="fixed mt-8 inset-0 z-50 flex  justify-center overflow-y-auto ">
+              <div className='items-center'>
           <div className="bg-white p-6 rounded-lg shadow-xl border-dotted border-2 border-Teal ">
             <h2 className="text-3xl font-bold mb-8 relative">
               <button
@@ -207,6 +208,7 @@ const Rooms = () => {
                     </div>
                   </form>
             </div>
+          </div>
           </div>
         </div> 
             )}
