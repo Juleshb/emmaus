@@ -11,7 +11,11 @@ const Rooms = () => {
     email: '',
     phone: '',
     checkInDate: '',
-    checkOutDate: ''
+    checkOutDate: '',
+    roomNumber: '',
+    category: '',
+    country: '',
+    otherRequest: ''
   });
 
   const handleBookNowClick = () => {
@@ -42,6 +46,10 @@ const Rooms = () => {
     formData.append('phone', bookingData.phone);
     formData.append('checkInDate', bookingData.checkInDate);
     formData.append('checkOutDate', bookingData.checkOutDate);
+    formData.append('roomNumber', bookingData.roomNumber);
+    formData.append('category', bookingData.category);
+    formData.append('country', bookingData.country);
+    formData.append('otherRequest', bookingData.otherRequest);
   
     // Make a POST request to the API endpoint
     fetch(apiUrl, {
@@ -66,7 +74,11 @@ const Rooms = () => {
       email: '',
       phone: '',
       checkInDate: '',
-      checkOutDate: ''
+      checkOutDate: '',
+      roomNumber: '',
+      category: '',
+      country: '',
+      otherRequest: ''
     });
   
     // Close the popup
@@ -163,6 +175,32 @@ const Rooms = () => {
                       <label htmlFor="checkOutDate" className="block text-gray-700 text-sm font-bold mb-2">Check-out Date</label>
                       <input type="date" id="checkOutDate" name="checkOutDate" value={bookingData.checkOutDate} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required />
                     </div>
+
+                    <div className="mb-4">
+                      <label htmlFor="roomNumber" className="block text-gray-700 text-sm font-bold mb-2">Number of room</label>
+                      <input type="number" id="roomNumber" name="roomNumber" value={bookingData.roomNumber} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required />
+                    </div>
+                    <div className="mb-4">
+                       <label htmlFor="category" className="block text-gray-700 text-sm font-bold mb-2">Room Category</label>
+                       <select id="category" name="category" value={bookingData.category} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required>
+                       <option value="">Select a category</option>
+                       <option value="single">Single</option>
+                       <option value="double">Double</option>
+                       <option value="suite">Suite</option>
+                       </select>
+                       </div>
+
+                    <div className="mb-4">
+                      <label htmlFor="country" className="block text-gray-700 text-sm font-bold mb-2">Country</label>
+                      <input type="text" id="country" name="country" value={bookingData.country} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required />
+                    </div>
+                    <div className="mb-4">
+                   <label htmlFor="otherRequest" className="block text-gray-700 text-sm font-bold mb-2">Other request</label>
+                   <textarea id="otherRequest" name="otherRequest" value={bookingData.otherRequest} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required />
+                   </div>
+
+
+
                     <div className="flex justify-end">
                       <button onClick={handleClosePopup} className="px-4 py-2 bg-orange-600 text-white rounded-lg mr-2">Cancel</button>
                       <button type="submit" className="px-4 py-2 bg-Teal text-white rounded-lg">Book</button>
