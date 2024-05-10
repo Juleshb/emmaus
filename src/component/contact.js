@@ -22,7 +22,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:4700/contact', {
+      const response = await fetch('https://emmausbe.onrender.com/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
