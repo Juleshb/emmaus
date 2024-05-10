@@ -234,7 +234,7 @@ const Rooms = () => {
 
             <div className="flex justify-center ">
                       <button onClick={handleClosesucsessPopup} className="text-xl px-4 py-2 bg-green-400 text-white rounded-lg mr-2 items-center flex">
-                      <i className="mr-2"><Icon icon="line-md:confirm-circle" /></i>OK</button>
+                      <i className="mr-2"><Icon icon="line-md:confirm-circle" /></i>Okay</button>
                     
                     </div>
             

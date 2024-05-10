@@ -19,9 +19,9 @@ function App() {
       <Navigation/>
       <Slideshow />
       <Home />
-      <Facilities />
+      
       <Rooms />
-     
+      <Facilities />
       <Restorent />
       <Conferancehall />
       <Halls />

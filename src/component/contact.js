@@ -5,12 +5,15 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const Contact = () => {
+  const [sucsessPopup, setsucsessPopup] = useState(false);
   const [formData, setFormData] = useState({
     names: '',
     emails: '',
     message: ''
   });
-
+  const handleClosesucsessPopup = () => {
+    setsucsessPopup(false);
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -30,7 +33,13 @@ const Contact = () => {
         body: JSON.stringify(formData)
       });
       if (response.ok) {
-        alert('Form submitted successfully!');
+        setsucsessPopup(true);
+        // Reset form data after successful submission
+        setFormData({
+          names: '',
+          emails: '',
+          message: ''
+        });
       } else {
         throw new Error('Form submission failed.');
       }
@@ -39,6 +48,7 @@ const Contact = () => {
       alert('Form submission failed.');
     }
   };
+  
 
   return (
     <>
@@ -96,6 +106,33 @@ const Contact = () => {
                         <i className='mr-2'><Icon icon="grommet-icons:send" /></i> Send
                       </button>
                     </form>
+
+                    {sucsessPopup && (
+              <div className="fixed m-4 mt-8 inset-0 z-50 flex  justify-center overflow-y-auto ">
+              <div className='items-center'>
+          <div className="bg-green-100 p-6 rounded-lg  shadow-xl border-dotted border-2 border-green-400 ">
+            
+            <div className="text-Teal text-9xl text-center inline-flex items-center justify-center w-12 h-12 mb-2 ">
+            <Icon icon="line-md:bell-twotone-loop" />
+                    </div>
+            <h2 className="text-2xl text-green-700 font-bold mb-4  ">Your message has well received</h2>
+            <p className='text-green-900'>Thank you for reaching out to us! </p>
+            <p className='text-green-900'>We are currently reviewing your message and will get back to you as soon as possible. </p>
+            <p className='text-green-900'>We will notifiy you by email</p>
+            <div className="max-w-sm mx-auto  px-8 pt-6 pb-8 mb-4">
+
+
+            <div className="flex justify-center ">
+                      <button onClick={handleClosesucsessPopup} className="text-xl px-4 py-2 bg-green-400 text-white rounded-lg mr-2 items-center flex">
+                      <i className="mr-2"><Icon icon="line-md:confirm-circle" /></i>Okay</button>
+                    
+                    </div>
+            
+            </div>
+          </div>
+          </div>
+        </div> 
+            )}
                   </div>
                   <div className="md:w-1/2 md:pr-8">
                     <div style={{ width: '100%', height: '400px' }}>
