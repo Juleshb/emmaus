@@ -102,7 +102,7 @@ const Rooms = () => {
                 <div className="hover:text-white bg-white rounded-lg hover:bg-Teal text-Teal relative flex flex-col min-w-0 break-words w-full mb-8">
                   <img className="w-full h-full object-cover rounded-t-lg" src={bg1} alt="Service" />
                   <div className="px-4 py-5 flex-auto">
-                    <h6 className="text-base font-semibold">Single standard Room </h6>
+                    <h6 className="text-base font-semibold">Single standard beds </h6>
                     <p className="mt-2 mb-4">Breakfast, free internet, parking & security, towel,and hot water.</p>
                     <button onClick={handleBookNowClick} className="px-6 py-3 font-bold border border-solid border-white text-white bg-Teal rounded-lg mr-4 text-sm">
                       Book Now
@@ -118,7 +118,7 @@ const Rooms = () => {
                 <div className="hover:text-white bg-white rounded-lg hover:bg-Teal text-Teal relative flex flex-col min-w-0 break-words w-full mb-8">
                   <img className="w-full h-full object-cover rounded-t-lg" src={bg2} alt="Service" />
                   <div className="px-4 py-5 flex-auto">
-                    <h6 className="text-base font-semibold">Double Standard Room </h6>
+                    <h6 className="text-base font-semibold">Double Standard beds </h6>
                     <p className="mt-2 mb-4">Breakfast, free internet, parking & security, towel,and hot water.</p>
                     <button onClick={handleBookNowClick} className="px-6 py-3 font-bold border border-solid border-white text-white bg-Teal rounded-lg mr-4 text-sm">
                       Book Now
@@ -134,7 +134,7 @@ const Rooms = () => {
                 <div className="hover:text-white bg-white rounded-lg hover:bg-Teal text-Teal relative flex flex-col min-w-0 break-words w-full mb-8">
                   <img className="w-full h-full object-cover rounded-t-lg" src={bg3} alt="Service" />
                   <div className="px-4 py-5 flex-auto">
-                    <h6 className="text-base font-semibold">Twin Room </h6>
+                    <h6 className="text-base font-semibold">Twin beds </h6>
                     <p className="mt-2 mb-4">Breakfast, free internet, parking & security, towel,and hot water.</p>
                     <button onClick={handleBookNowClick} className="px-6 py-3 font-bold border border-solid border-white text-white bg-Teal rounded-lg mr-4 text-sm">
                       Book Now
@@ -193,7 +193,7 @@ const Rooms = () => {
                        <option value="">Select a category</option>
                        <option value="single">Single</option>
                        <option value="double">Double</option>
-                       <option value="suite">Suite</option>
+                       <option value="suite">Twin</option>
                        </select>
                        </div>
 
