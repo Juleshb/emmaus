@@ -1,9 +1,45 @@
+import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
 import backgroundImage2 from '../assets/s1.JPG';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-const contact = () => {
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    names: '',
+    emails: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:4700/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        alert('Form submitted successfully!');
+      } else {
+        throw new Error('Form submission failed.');
+      }
+    } catch (error) {
+      console.error('Error occurred:', error);
+      alert('Form submission failed.');
+    }
+  };
+
   return (
     <>
       <div className="relative flex  content-center items-center justify-center " id="contact">
@@ -40,26 +76,26 @@ const contact = () => {
                       <Icon icon="fluent:call-24-regular" width="30" />
                       <h2 className=" ml-5  font-light tracking-wide md:text-center xs:text-center ">+250 788 865 736 / +250 787 172 920</h2>
                     </div>
-                    <form className="m-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="col-span-1">
-              <label htmlFor="lastName" className="block text-sm font-medium ">Names</label>
-              <input type="text" name="lastName" id="lastName" className="mt-1 text-black p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required />
-            </div>
-            <div className="col-span-1">
-              <label htmlFor="email" className="block text-sm font-medium ">Email</label>
-              <input type="email" name="email" id="email" className="mt-1 text-black p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required />
-            </div>
-            <div className="col-span-1">
-              <label htmlFor="message" className="block text-sm font-medium ">Message</label>
-              <textarea name="message" id="message" className="mt-1 text-black p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required />
-            </div>
-          </div>
+                    <form className="m-8" onSubmit={handleSubmit}>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="col-span-1">
+                          <label htmlFor="names" className="block text-sm font-medium">Names</label>
+                          <input type="text" name="names" id="names" className="mt-1 text-black p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required onChange={handleChange} />
+                        </div>
+                        <div className="col-span-1">
+                          <label htmlFor="email" className="block text-sm font-medium">Email</label>
+                          <input type="email" name="emails" id="email" className="mt-1 text-black p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required onChange={handleChange} />
+                        </div>
+                        <div className="col-span-1">
+                          <label htmlFor="message" className="block text-sm font-medium">Message</label>
+                          <textarea name="message" id="message" className="mt-1 text-black p-2 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 focus:border-blue-500 block w-full" required onChange={handleChange}></textarea>
+                        </div>
+                      </div>
 
-          <button type="submit" className="mt-4 px-4 py-3 bg-white text-Teal hover:bg-Teal hover:opacity-50 hover:text-white border hover:border-white border-Teal focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 items-center text-center flex">
-            <i className='mr-2'><Icon icon="grommet-icons:send" /></i> Send
-          </button>
-        </form>
+                      <button type="submit" className="mt-4 px-4 py-3 bg-white text-Teal hover:bg-Teal hover:opacity-50 hover:text-white border hover:border-white border-Teal focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 items-center text-center flex">
+                        <i className='mr-2'><Icon icon="grommet-icons:send" /></i> Send
+                      </button>
+                    </form>
                   </div>
                   <div className="md:w-1/2 md:pr-8">
                     <div style={{ width: '100%', height: '400px' }}>
@@ -89,4 +125,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
