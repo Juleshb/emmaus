@@ -3,7 +3,7 @@
 // import { logos } from "../../Data";
 // import { motion } from "framer-motion";
 
-import SlideShow from './SlideShow';
+// import SlideShow from './SlideShow';
 
 import React from "react";
 const Home = () => {
@@ -17,11 +17,7 @@ const Home = () => {
     <div className="section  " id="home">
       <div className="md:flex items-center justify-center">
         
-      <div className="md:w-[60%]">
-      
-      <SlideShow />
-  
-        </div>
+     
         <div>
          
 

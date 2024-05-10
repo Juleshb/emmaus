@@ -3,9 +3,14 @@ import bg1 from "../assets/ZW8A9585.JPG";
 import bg2 from "../assets/double.webp";
 import bg3 from "../assets/ZW8A9613.JPG";
 import { Icon } from '@iconify/react';
+import SlideShow from './SlideShow';
+import payment from "../assets/payment1.png"
 
 const Rooms = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [detailPopup, setdetailPopup] = useState(false);
+  const [detailPopup1, setdetailPopup1] = useState(false);
+  const [detailPopup2, setdetailPopup2] = useState(false);
   const [sucsessPopup, setsucsessPopup] = useState(false);
   const [bookingData, setBookingData] = useState({
     name: '',
@@ -21,10 +26,35 @@ const Rooms = () => {
 
   const handleBookNowClick = () => {
     setShowPopup(true);
+    setdetailPopup(false);
+    setdetailPopup1(false);
+    setdetailPopup2(false);
   };
 
   const handleClosesucsessPopup = () => {
     setsucsessPopup(false);
+  };
+
+  const handleDetailPopup = () => {
+    setdetailPopup(true);
+  };
+
+  const handleCloseDetailPopup = () => {
+    setdetailPopup(false);
+  };
+  const handleDetailPopup1 = () => {
+    setdetailPopup1(true);
+  };
+
+  const handleCloseDetailPopup1 = () => {
+    setdetailPopup1(false);
+  };
+  const handleDetailPopup2 = () => {
+    setdetailPopup2(true);
+  };
+
+  const handleCloseDetailPopup2 = () => {
+    setdetailPopup2(false);
   };
 
   const handleClosePopup = () => {
@@ -107,7 +137,7 @@ const Rooms = () => {
                     <button onClick={handleBookNowClick} className="px-6 py-3 font-bold border border-solid border-white text-white bg-Teal rounded-lg mr-4 text-sm">
                       Book Now
                     </button>
-                    <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
+                    <button onClick={handleDetailPopup} className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
                       View Detail
                     </button>
                   </div>
@@ -123,7 +153,7 @@ const Rooms = () => {
                     <button onClick={handleBookNowClick} className="px-6 py-3 font-bold border border-solid border-white text-white bg-Teal rounded-lg mr-4 text-sm">
                       Book Now
                     </button>
-                    <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
+                    <button onClick={handleDetailPopup1} className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
                       View Detail
                     </button>
                   </div>
@@ -139,7 +169,7 @@ const Rooms = () => {
                     <button onClick={handleBookNowClick} className="px-6 py-3 font-bold border border-solid border-white text-white bg-Teal rounded-lg mr-4 text-sm">
                       Book Now
                     </button>
-                    <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
+                    <button onClick={handleDetailPopup2} className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
                       View Detail
                     </button>
                   </div>
@@ -242,6 +272,209 @@ const Rooms = () => {
           </div>
           </div>
         </div> 
+            )}
+
+            {detailPopup && (
+              <div className="md:flex items-center justify-center fixed inset-0 z-50  bg-Teal/25 overflow-y-auto">
+              <div className="bg-white p-6 rounded-lg shadow-xl border-dotted border-2 border-Teal  justify-center' ">
+
+              <h2 className="text-3xl font-bold mb-8 relative">
+              <button
+                className="absolute top-0 right-0  bg-white text-close rounded-lg hover:bg-Teal hover:text-white focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 "
+                onClick={handleCloseDetailPopup}
+              >
+                <Icon icon="material-symbols:close" />
+              </button>
+            </h2>
+        
+      <div className="md:w-[60%]">
+      
+      <SlideShow />
+  
+        </div>
+        <div>
+         
+
+          
+          <div className="sm:text-[2.5rem] text-[1.825rem] text-Teal font-bold mb-4">
+          Single standard Beds
+          </div>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Size :</span> 35 SQ
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Bed Type :</span> Single
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Max Adults :</span> 1
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Max Children :</span> 1
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Our room goes with : </span> Breakfast, free internet, parking & security, towel,and hot water.
+          </p>
+          <p className="text-base m4 leading-7 text-gray max-w-sm">
+          Work desk and chair
+          </p>
+          <p className="text-base m4 leading-7 text-gray max-w-sm">
+          Bathrobe and slippers
+          </p>
+          
+          <p className="text-base m4 leading-7 text-gray max-w-sm">
+          24-hour room service
+          </p>
+          <div className="font-bold m-6">Payment Methods</div>
+          <p className="text-sm leading-7">
+          
+          <img src={payment} alt="" className="" />
+          </p>
+          <div className="mt-6">
+            <button onClick={handleBookNowClick} className="px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm">
+              Book now
+            </button>
+            <button onClick={handleCloseDetailPopup} className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
+             cance
+            </button>
+          </div>
+        </div>
+       </div>
+      </div>
+            )}
+
+            {detailPopup1 && (
+              <div className="md:flex items-center justify-center fixed inset-0 z-50  bg-Teal/25 overflow-y-auto">
+              <div className="bg-white p-6 rounded-lg shadow-xl border-dotted border-2 border-Teal  justify-center' ">
+
+              <h2 className="text-3xl font-bold mb-8 relative">
+              <button
+                className="absolute top-0 right-0  bg-white text-close rounded-lg hover:bg-Teal hover:text-white focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 "
+                onClick={handleCloseDetailPopup1}
+              >
+                <Icon icon="material-symbols:close" />
+              </button>
+            </h2>
+        
+      <div className="md:w-[60%]">
+      
+      <SlideShow />
+  
+        </div>
+        <div>
+         
+
+          
+          <div className="sm:text-[2.5rem] text-[1.825rem] text-Teal font-bold mb-4">
+          Double Standard Beds
+          </div>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Size :</span> 45 SQ
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Bed Type :</span> Double
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Max Adults :</span> 2
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Max Children :</span> 1
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Our room goes with : </span> Breakfast, free internet, parking & security, towel,and hot water.
+          </p>
+          <p className="text-base m4 leading-7 text-gray max-w-sm">
+          Work desk and chair
+          </p>
+          <p className="text-base m4 leading-7 text-gray max-w-sm">
+          Bathrobe and slippers
+          </p>
+          
+          <p className="text-base m4 leading-7 text-gray max-w-sm">
+          24-hour room service
+          </p>
+          <div className="font-bold m-6">Payment Methods</div>
+          <p className="text-sm leading-7">
+          
+          <img src={payment} alt="" className="" />
+          </p>
+          <div className="mt-6">
+            <button onClick={handleBookNowClick} className="px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm">
+              Book now
+            </button>
+            <button onClick={handleCloseDetailPopup1} className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
+             cance
+            </button>
+          </div>
+        </div>
+       </div>
+      </div>
+            )}
+            {detailPopup2 && (
+              <div className="md:flex items-center justify-center fixed inset-0 z-50  bg-Teal/25 overflow-y-auto">
+              <div className="bg-white p-6 rounded-lg shadow-xl border-dotted border-2 border-Teal  justify-center' ">
+
+              <h2 className="text-3xl font-bold mb-8 relative">
+              <button
+                className="absolute top-0 right-0  bg-white text-close rounded-lg hover:bg-Teal hover:text-white focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 "
+                onClick={handleCloseDetailPopup2}
+              >
+                <Icon icon="material-symbols:close" />
+              </button>
+            </h2>
+        
+      <div className="md:w-[60%]">
+      
+      <SlideShow />
+  
+        </div>
+        <div>
+         
+
+          
+          <div className="sm:text-[2.5rem] text-[1.825rem] text-Teal font-bold mb-4">
+          Twin Beds
+          </div>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Size :</span> 45 SQ
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Bed Type :</span> Single
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Max Adults :</span> 2
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Max Children :</span> 1
+          </p>
+          <p className="text-base leading-7 text-gray max-w-sm">
+          <span className='font-semibold text-Teal'>Our room goes with : </span> Breakfast, free internet, parking & security, towel,and hot water.
+          </p>
+          <p className="text-base m4 leading-7 text-gray max-w-sm">
+          Work desk and chair
+          </p>
+          <p className="text-base m4 leading-7 text-gray max-w-sm">
+          Bathrobe and slippers
+          </p>
+          
+          <p className="text-base m4 leading-7 text-gray max-w-sm">
+          24-hour room service
+          </p>
+          <div className="font-bold m-6">Payment Methods</div>
+          <p className="text-sm leading-7">
+          
+          <img src={payment} alt="" className="" />
+          </p>
+          <div className="mt-6">
+            <button onClick={handleBookNowClick} className="px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm">
+              Book now
+            </button>
+            <button onClick={handleCloseDetailPopup2} className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
+             cance
+            </button>
+          </div>
+        </div>
+       </div>
+      </div>
             )}
 
           </div>

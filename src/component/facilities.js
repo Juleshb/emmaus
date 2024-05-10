@@ -7,7 +7,7 @@ const facilities = () => {
   return (
    
    <>
-   <p className='text-center sm:text-[2.5rem] text-[1.825rem]  font-bold text-Teal'>our faclties</p>
+   <p className='text-center sm:text-[2.5rem] text-[1.825rem]  font-bold text-Teal'>our facilities</p>
 <div className="flex flex-wrap bg-colr2 w-full mb-8  rounded-t-lg">
 
                  <div className="w-full md:w-1/4 px-4 text-center">
