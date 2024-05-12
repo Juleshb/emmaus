@@ -18,8 +18,8 @@ const Navigation = () => {
     <div className="bg-Teal text-white py-1">
       <div className="container mx-auto flex justify-between items-center">
         <div className=" flex space-x-4 m-2"> 
-        <a href={`https://wa.me/${phoneNumber}`} target="_blank" rel="noopener noreferrer" className="flex bg-colr2 hover:bg-green-600 text-Teal py-2 px-4 rounded">
-        <Icon icon="fluent:call-24-regular" /> +250 788 865 736 
+        <a href={`https://wa.me/${phoneNumber}`} target="_blank" rel="noopener noreferrer" className="flex bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">
+         Chat Now
     </a> 
       
         <a

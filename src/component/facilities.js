@@ -10,7 +10,7 @@ const facilities = () => {
    <p className='text-center sm:text-[2.5rem] text-[1.825rem]  font-bold text-Teal'>our facilities</p>
 <div className="flex flex-wrap bg-colr2 w-full mb-8  rounded-t-lg">
 
-                 <div className="w-full md:w-1/4 px-4 text-center">
+                 <div className="w-full md:w-1/6 px-4 text-center">
                 <div className="text-Teal relative flex flex-col min-w-0 break-words ">
                   <div className="px-4 py-5 flex-auto">
                  
@@ -24,7 +24,7 @@ const facilities = () => {
                 </div>
               </div>
 
-              <div className="w-full md:w-1/4 px-4 text-center">
+              <div className="w-full md:w-1/6 px-4 text-center">
                 <div className="text-Teal relative flex flex-col min-w-0 break-words ">
                   <div className="px-4 py-5 flex-auto">
                  
@@ -39,7 +39,7 @@ const facilities = () => {
                 </div>
               </div>
 
-              <div className="w-full md:w-1/4 px-4 text-center">
+              <div className="w-full md:w-1/6 px-4 text-center">
                 <div className="text-Teal relative flex flex-col min-w-0 break-words ">
                   <div className="px-4 py-5 flex-auto">
                  
@@ -53,7 +53,7 @@ const facilities = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-1/4 px-4 text-center">
+              <div className="w-full md:w-1/6 px-4 text-center">
                 <div className="text-Teal relative flex flex-col min-w-0 break-words ">
                   <div className="px-4 py-5 flex-auto">
                  
@@ -61,6 +61,32 @@ const facilities = () => {
                     <Icon icon="ic:sharp-restaurant" />
                     </div>
                     <h6 className="text-base  pb-2 font-semibold">Restaurant</h6>
+                    {/* <p className="mt-2 mb-4 ">We stay ahead of the curve, embracing emerging technologies to deliver solutions that stand out in a dynamic market.
+                    </p> */}
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/6 px-4 text-center">
+                <div className="text-Teal relative flex flex-col min-w-0 break-words ">
+                  <div className="px-4 py-5 flex-auto">
+                 
+                    <div className="text-Teal text-9xl text-center inline-flex items-center justify-center w-12 h-12 mb-2 ">
+                    <Icon icon="guidance:garden" />
+                    </div>
+                    <h6 className="text-base  pb-2 font-semibold">Garden</h6>
+                    {/* <p className="mt-2 mb-4 ">We stay ahead of the curve, embracing emerging technologies to deliver solutions that stand out in a dynamic market.
+                    </p> */}
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/6 px-4 text-center">
+                <div className="text-Teal relative flex flex-col min-w-0 break-words ">
+                  <div className="px-4 py-5 flex-auto">
+                 
+                    <div className="text-Teal text-9xl text-center inline-flex items-center justify-center w-12 h-12 mb-2 ">
+                    <Icon icon="ic:twotone-toys" />
+                    </div>
+                    <h6 className="text-base  pb-2 font-semibold">Toys</h6>
                     {/* <p className="mt-2 mb-4 ">We stay ahead of the curve, embracing emerging technologies to deliver solutions that stand out in a dynamic market.
                     </p> */}
                   </div>

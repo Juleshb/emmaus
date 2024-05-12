@@ -5,7 +5,6 @@ import image2 from "../assets/ZW8A9585.JPG";
 import image3 from "../assets/ZW8A9595.JPG";
 import image4 from "../assets/ZW8A9587.JPG";
 import image5 from "../assets/ZW8A9613.JPG";
-// import { Icon } from '@iconify/react';
 
 const slides = [
   {

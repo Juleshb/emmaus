@@ -3,6 +3,11 @@ import { Icon } from '@iconify/react';
 import s1 from '../assets/s1.JPG';
 import s2 from '../assets/s2.JPG';
 import s3 from '../assets/s3.JPG';
+import s4 from '../assets/s4.JPG';
+import s5 from '../assets/s5.JPG';
+import s6 from '../assets/s6.JPG';
+import s7 from '../assets/s7.JPG';
+
 
 const Slideshow = () => {
   const slides = [
@@ -21,6 +26,27 @@ const Slideshow = () => {
       text: 'Warm hospitality at Emmaus hostel',
       description: 'Your journey begins here, where every moment is crafted to exceed your expectations. Welcome to a sanctuary of luxury and comfort in the heart of Africa.',
     },
+    {
+      image: s4,
+      text: 'Welcome to Emmaus hostel ',
+      description: 'where impeccable service and attention to detail create a stay beyond compare. Explore our world of refined indulgence and make yourself at home in style.',
+    },
+    {
+      image: s5,
+      text: 'At Emmaus hostel',
+      description: 'our dedicated team is committed to ensuring your stay is nothing short of exceptional. Welcome to a place where every detail is tailored to your comfort and enjoyment.',
+    },
+    {
+      image: s6,
+      text: 'Warm hospitality at Emmaus hostel',
+      description: 'Your journey begins here, where every moment is crafted to exceed your expectations. Welcome to a sanctuary of luxury and comfort in the heart of Africa.',
+    },
+    {
+      image: s7,
+      text: 'Welcome to Emmaus hostel ',
+      description: 'where impeccable service and attention to detail create a stay beyond compare. Explore our world of refined indulgence and make yourself at home in style.',
+    },
+ 
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -43,7 +69,7 @@ const Slideshow = () => {
 
   return (
     <>
-    <div className="relative w-full h-96 md:h-screen mt-4 flex items-center justify-center" id="home">
+    <div className="relative w-full h-96 md:h-screen mt-4 flex content-end justify-center" id="home">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -53,7 +79,7 @@ const Slideshow = () => {
           style={{ backgroundImage: `url(${slide.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-r from-Teal bg-opacity-70">
-            <div className={`text-white text-left mt-4 font-bold mb-4 ${index === currentSlide ? 'text-2xl md:text-2xl' : 'text-2xl md:text-2xl'}`}>{slide.text}</div>
+            <div className={`text-white text-left mt-4 sm:text-[2.5rem] text-[1.825rem]  font-bold ${index === currentSlide ? 'text-2xl md:text-2xl' : 'text-2xl md:text-2xl'}`}>{slide.text}</div>
             <div className="text-white text-left font-extralight m-4">{slide.description}</div>
             <button className="hover:bg-red-950 text-white text-xl font-bold py-2 px-4  absolute left-0 top-1/2 transform -translate-y-1/2 hidden sm:inline-block" onClick={prevSlide}>
               <Icon icon="ooui:arrow-previous-ltr" />
