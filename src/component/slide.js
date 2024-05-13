@@ -105,7 +105,7 @@ const Slideshow = () => {
             in Huye district in the Southern province of Rwanda, near Huye stadium, just 50 minutes driving from the border of Burundi. 
             Our staff members are always ready to provide friendly, individualized service, and we are also happy to offer a range of services to meet your needs. 
             From booking to check out, we are ready to make your stay as enjoyable as possible. 
-            Our hostel has single bed rooms, double bed rooms, and twin rooms, as well as a conference halls and bar-restaurant to meet your needs. Our bar and restaurant offer fresh food with several menu options for you to choose from.</p>
+            Our hostel has single beds, double bed rooms, and twin rooms, as well as a conference halls and bar-restaurant to meet your needs. Our bar and restaurant offer fresh food with several menu options for you to choose from.</p>
 
             <p className='p-2'>We're thrilled to have you here. Whether you're staying for a night or longer, we hope you have a wonderful time at our hostel.</p>
             <p className='p-2'>If you need any assistance or recommendations for exploring the area, feel free to ask our friendly staff. Enjoy your stay!</p>

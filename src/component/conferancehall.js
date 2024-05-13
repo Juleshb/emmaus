@@ -65,9 +65,9 @@ const Slideshow = () => {
               <div className="relative">
                 <img src={slide.image} alt="" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-Teal bg-opacity-50 flex items-center justify-center">
-                  <button className="py-3 px-6 text-sm border border-solid border-white rounded-full font-bold text-white">
+                  {/* <button className="py-3 px-6 text-sm border border-solid border-white rounded-full font-bold text-white">
                     Book Now
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
