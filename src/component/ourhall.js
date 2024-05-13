@@ -13,7 +13,7 @@ const halls = () => {
    
     <main>
        
-        <section className="pb-5 -mt-64 bg-colr2 ">
+        <section className="pb-5 -mt-40 bg-colr2 ">
 
           
            
