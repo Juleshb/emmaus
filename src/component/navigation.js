@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 
 import { Icon } from '@iconify/react';
 import logo from '../assets/logo.png'
@@ -47,12 +48,12 @@ const Navigation = () => {
        <p className='mt-3'> EMMAUS HOSTEL </p> </a>
         </div>
         <div className="hidden md:flex text-lg text-Teal">
-          <a href="#home" className=" underline hover:underline-offset-8 px-4">Home</a>
-          <a href="#about" className=" underline hover:underline-offset-8 px-4">About</a>
-          <a href="#rooms" className="underline hover:underline-offset-8 px-4">Rooms</a>
-          <a href="#conferancehall" className=" underline hover:underline-offset-8 px-4">Meeting & Events</a>
-          <a href="#conferancehall" className=" underline hover:underline-offset-8 px-4">Bar & Restaurant</a>
-          <a href="#contact" className=" underline hover:underline-offset-8 px-4">Contact</a>
+          <Link to="/" className=" underline hover:underline-offset-8 px-4">Home</Link>
+          <Link to="/" className=" underline hover:underline-offset-8 px-4">About</Link>
+          <Link to="/rooms" className="underline hover:underline-offset-8 px-4">Rooms</Link>
+          <Link to="/conferenceRooms" className=" underline hover:underline-offset-8 px-4">Meeting & Events</Link>
+          <Link to="/" className=" underline hover:underline-offset-8 px-4">Bar & Restaurant</Link>
+          <Link to="/" className=" underline hover:underline-offset-8 px-4">Contact</Link>
          
         </div>
         <div className="flex md:hidden">
