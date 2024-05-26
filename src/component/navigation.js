@@ -27,7 +27,7 @@ const Navigation = () => {
       href={`https://wa.me/${phoneNumber}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-4 right-4 bg-green-500 text-3xl hover:bg-green-600 text-white py-2 px-4 p-6 rounded-full z-10 hover:animate-ping"
+      className="fixed bottom-4 right-4 bg-green-500 text-3xl hover:bg-green-600 text-white py-2 px-4 p-6 rounded-full z-10 "
     >
    
     <Icon icon="akar-icons:whatsapp-fill" />
@@ -44,16 +44,16 @@ const Navigation = () => {
     </div>
       <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
       <div className="flex items-center">
-      <a href="/" className="text-black flex  text-lg"><img src={logo} alt="Logo" className="h-12 w-12 mr-2" /> {/* Adjust the class to your logo size */}
+      <a href="/" className="text-black flex  text-lg" onClick={toggleMenu}><img src={logo} alt="Logo" className="h-12 w-12 mr-2" /> {/* Adjust the class to your logo size */}
        <p className='mt-3'> EMMAUS HOSTEL </p> </a>
         </div>
         <div className="hidden md:flex text-lg text-Teal">
           <Link to="/" className=" underline hover:underline-offset-8 px-4">Home</Link>
           <Link to="/" className=" underline hover:underline-offset-8 px-4">About</Link>
           <Link to="/rooms" className="underline hover:underline-offset-8 px-4">Rooms</Link>
-          <Link to="/conferenceRooms" className=" underline hover:underline-offset-8 px-4">Meeting & Events</Link>
-          <Link to="/" className=" underline hover:underline-offset-8 px-4">Bar & Restaurant</Link>
-          <Link to="/" className=" underline hover:underline-offset-8 px-4">Contact</Link>
+          <Link to="/conferenceRooms" className=" underline hover:underline-offset-8 px-4">Conference Rooms</Link>
+          <Link to="/barAndRestaurant" className=" underline hover:underline-offset-8 px-4">Bar & Restaurant</Link>
+          <Link to="/contact" className=" underline hover:underline-offset-8 px-4">Contact</Link>
          
         </div>
         <div className="flex md:hidden">
@@ -74,11 +74,12 @@ const Navigation = () => {
             </button> */}
           </div>
           <div className="flex flex-col items-center">
-          <a href="#home" className=" underline hover:underline-offset-8 px-4">Home</a>
-          <a href="#about" className=" underline hover:underline-offset-8 px-4">About</a>
-          <a href="#rooms" className="underline hover:underline-offset-8 px-4">Rooms</a>
-          <a href="#conferancehall" className=" underline hover:underline-offset-8 px-4">Meeting & Events</a>
-          <a href="#contact" className=" underline hover:underline-offset-8 px-4">Contact</a>
+          <Link to="/" className=" underline hover:underline-offset-8 px-4 mb-8"  onClick={toggleMenu}>Home</Link>
+          <Link to="/" className=" underline hover:underline-offset-8 px-4 mb-8"  onClick={toggleMenu}>About</Link>
+          <Link to="/rooms" className="underline hover:underline-offset-8 px-4 mb-8"  onClick={toggleMenu}>Rooms</Link>
+          <Link to="/conferenceRooms" className=" underline hover:underline-offset-8 px-4 mb-8"  onClick={toggleMenu}>Conference Rooms</Link>
+          <Link to="/barAndRestaurant" className=" underline hover:underline-offset-8 px-4 mb-8"  onClick={toggleMenu}>Bar & Restaurant</Link>
+          <Link to="/contact" className=" underline hover:underline-offset-8 px-4"  onClick={toggleMenu}>Contact</Link>
           </div>
         </div>
       )}

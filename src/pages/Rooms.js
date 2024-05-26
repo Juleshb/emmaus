@@ -65,7 +65,7 @@ const Rooms = () => {
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-r from-Teal bg-opacity-70 text-left p-8">
               <div className="text-left max-w-4xl p-8">
                 <div className="text-4xl text-white font-bold mb-8">Rooms</div>
-                <div className="text-white text-left font-extralight mb-4"><i></i></div>
+                <div className="text-white text-left font-extralight mb-4"><i>We hope you have a wonderful time at our hostel.</i></div>
                 <button className="hover:bg-red-950 text-white text-xl font-bold py-2 px-4 absolute left-0 top-1/2 transform -translate-y-1/2 hidden sm:inline-block" onClick={prevSlide}>
                   <Icon icon="ooui:arrow-previous-ltr" />
                 </button>

@@ -1,6 +1,7 @@
 
 import bg1 from "../assets/ZW8A9603.JPG"
 import bg2 from "../assets/ZW8A9566.JPG"
+import {Link} from 'react-router-dom';
 
 
 
@@ -41,10 +42,9 @@ const halls = () => {
                     Event Planning and Coordination, Venue Selection, Catering Services, Decor and Theming, Audiovisual Equipment and Technical Support, Hospitality and Guest Services, Post-Event Services .
                     </p>
 
-                    
-            <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
-              Contact us
-            </button>
+                    <Link to="/conferenceRooms" className=" hover:bg-white bg-Teal border border-white hover:text-Teal text-white px-3 py-2 mb-12 rounded-md text-base">
+            Book now
+            </Link>
 
                  </div>
                 </div>
@@ -60,9 +60,9 @@ const halls = () => {
                     Our meeting rooms are equipped with state-of-the-art technology, including audiovisual equipment, high-speed internet access, and customizable lighting, ensuring seamless presentations and productive discussions. With flexible seating arrangements and ergonomic furnishings, we cater to the unique needs of your event, whether it's an intimate board meeting or a large-scale conference.
                     </p>
                     
-            <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
-            Contact us
-            </button>
+                    <Link to="/conferenceRooms" className=" hover:bg-white bg-Teal border border-white hover:text-Teal text-white px-3 py-2 mb-12 rounded-md text-base">
+            Book now
+            </Link>
 
                  </div>
                 </div>

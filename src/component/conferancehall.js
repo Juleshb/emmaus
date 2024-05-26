@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import RestorentImage from '../assets/ZW8A9603.JPG';
 import Image1 from '../assets/ZW8A9561.JPG';
 import Image2 from '../assets/ZW8A9566.JPG';
+import {Link} from 'react-router-dom';
 // import { motion } from "framer-motion";
 
 const Slideshow = () => {
@@ -65,9 +66,10 @@ const Slideshow = () => {
               <div className="relative">
                 <img src={slide.image} alt="" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-Teal bg-opacity-50 flex items-center justify-center">
-                  <button className="py-3 px-6 text-sm border border-solid border-white rounded-full font-bold text-white">
-                    Book Now
-                  </button>
+                  
+                <Link to="/conferenceRooms" className=" hover:bg-white border border-white hover:text-Teal text-white px-3 py-2 mb-12 rounded-md text-base">
+            View More
+            </Link>
                 </div>
               </div>
             </div>

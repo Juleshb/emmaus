@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Icon } from '@iconify/react';
+import {Link} from 'react-router-dom';
 import s1 from '../assets/s1.JPG';
 import s2 from '../assets/s2.JPG';
 import s3 from '../assets/s3.JPG';
@@ -81,7 +82,7 @@ const Slideshow = () => {
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-r from-Teal bg-opacity-70 text-left p-8">
           <div className="text-left max-w-4xl p-8">
             <div className="text-4xl text-white font-bold  mb-8 ">{slide.text}</div>
-            <div className="text-white text-left font-extralight mb-4"><i>{slide.description}</i></div>
+            <div className="text-white text-left font-extralight mb-4"><i>" {slide.description} "</i></div>
             <button className="hover:bg-red-950 text-white text-xl font-bold py-2 px-4  absolute left-0 top-1/2 transform -translate-y-1/2 hidden sm:inline-block" onClick={prevSlide}>
               <Icon icon="ooui:arrow-previous-ltr" />
             </button>
@@ -89,8 +90,12 @@ const Slideshow = () => {
               <Icon icon="ooui:arrow-next-ltr" />
             </button>
             <div className="flex justify-left space-x-4">
-          <button className="bg-white text-Teal font-semibold py-2 px-4 rounded">Join Our rooms</button>
-          <button className="bg-green-500 text-white font-semibold py-2 px-4 rounded" id="about">Join Our Bar and Restrent</button>
+            <Link to="/rooms" className=" hover:bg-white border border-white hover:text-Teal text-white px-3 py-2 rounded-md text-base">
+            Our rooms
+            </Link>
+            <Link to="/barAndRestaurant" className=" hover:bg-white bg-green-500 hover:text-Teal text-white px-3 py-2 rounded-md text-base">
+            Our Bar and Restrent
+            </Link>
         </div>
         </div>
           </div>

@@ -69,14 +69,14 @@ const Contact = () => {
           <div className="items-center flex flex-wrap">
             <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
               <div className="">
-                <h1 className="text-white mb-10 font-semibold text-3xl">
-                  Get in touch with us
+                <h1 className="text-white mb-10 font-semibold text-xl">
+                Drop us message for any querry
                 </h1>
                 <div className="container mx-auto p-4 flex flex-col md:flex-row justify-between">
                   <div className="md:w-1/2 mt-4 md:mt-0 md:pr-8 gap-4 justify-items-start">
                     <div className="flex ml-5 mt-10">
                       <Icon icon="clarity:map-marker-line" width="30" />
-                      <h2 className="font-light ml-5  tracking-wide md:text-center xs:text-center ">Butare, Rwanda</h2>
+                      <h2 className="font-light ml-5  tracking-wide md:text-center xs:text-center ">Huye City, near National Museum</h2>
                     </div>
                     <div className="flex ml-5  mt-5">
                       <Icon icon="clarity:email-line" width="30" />
