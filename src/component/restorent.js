@@ -58,6 +58,9 @@ const Restaurant = () => {
           <p className="text-sm leading-7 mb-4">
             The menu offers an excellent selection of expertly prepared Rwandan, African and internationally dishes to suit your choice.
           </p>
+          <button className="py-3 px-6 m-4 text-sm border border-solid border-white rounded-full font-bold text-white">
+                    Order Now
+                  </button>
           <div className="flex space-x-2">
             {images.map((image, index) => (
               <img
@@ -69,6 +72,7 @@ const Restaurant = () => {
               />
             ))}
           </div>
+         
         </div>
       </div>
     </div>

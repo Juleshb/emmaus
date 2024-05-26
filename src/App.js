@@ -1,41 +1,21 @@
-import Navigation from "./component/navigation";
-import Slideshow from "./component/slide";
-import Home from "./component/home";
-import Restorent from "./component/restorent";
-import Rooms from "./component/ourroom";
-import Conferancehall from "./component/conferancehall";
-import Facilities from "./component/facilities";
-import Contact from "./component/contact";
-import Footer from "./component/footer";
-import Halls from "./component/ourhall";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes,  } from 'react-router-dom';
+import Index from './component/index';
+import ConferenceRooms from './pages/ConferenceRooms';
+import Rooms from './pages/Rooms';
+// import Contact from './components/Contact';
 
-
-
-function App() {
-
+const App = () => {
   return (
-    <div className="font-Poppins bg-colr2">
-     
-      <Navigation/>
-      <Slideshow />
-      <Home />
+    <Router>
       
-      <Rooms />
-      <Facilities />
-      <Restorent />
-      <Conferancehall />
-      <Halls />
-      <Contact />
-      <Footer />
-     
-     
-      
-      
-      
-
-      
-    </div>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/conferenceRooms" element={<ConferenceRooms />} />
+        <Route path="/rooms" element={<Rooms />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

@@ -125,7 +125,7 @@ const Rooms = () => {
   return (
     <>
       <main>
-        <section className="pb-5 -mt-0 bg-colr2">
+        <section className="pb-5 -mt-0 bg-colr2" id='rooms'>
           <div className="container mx-auto">
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center transition-all duration-1000 ease-in-out transform scale-100 hover:scale-105">

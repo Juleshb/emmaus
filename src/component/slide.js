@@ -13,37 +13,37 @@ const Slideshow = () => {
   const slides = [
     {
       image: s1,
-      text: 'Welcome to Emmaus hostel ',
+      text: 'WELCOME TO EMMAUS HOSTEL',
       description: 'where impeccable service and attention to detail create a stay beyond compare. Explore our world of refined indulgence and make yourself at home in style.',
     },
     {
       image: s2,
-      text: 'At Emmaus hostel',
+      text: 'WELCOME TO EMMAUS HOSTEL',
       description: 'our dedicated team is committed to ensuring your stay is nothing short of exceptional. Welcome to a place where every detail is tailored to your comfort and enjoyment.',
     },
     {
       image: s3,
-      text: 'Warm hospitality at Emmaus hostel',
+      text: 'WELCOME TO EMMAUS HOSTEL',
       description: 'Your journey begins here, where every moment is crafted to exceed your expectations. Welcome to a sanctuary of luxury and comfort in the heart of Africa.',
     },
     {
       image: s4,
-      text: 'Welcome to Emmaus hostel ',
+      text: 'WELCOME TO EMMAUS HOSTEL ',
       description: 'where impeccable service and attention to detail create a stay beyond compare. Explore our world of refined indulgence and make yourself at home in style.',
     },
     {
       image: s5,
-      text: 'At Emmaus hostel',
+      text: 'WELCOME TO EMMAUS HOSTEL',
       description: 'our dedicated team is committed to ensuring your stay is nothing short of exceptional. Welcome to a place where every detail is tailored to your comfort and enjoyment.',
     },
     {
       image: s6,
-      text: 'Warm hospitality at Emmaus hostel',
+      text: 'WELCOME TO EMMAUS HOSTEL',
       description: 'Your journey begins here, where every moment is crafted to exceed your expectations. Welcome to a sanctuary of luxury and comfort in the heart of Africa.',
     },
     {
       image: s7,
-      text: 'Welcome to Emmaus hostel ',
+      text: 'WELCOME TO EMMAUS HOSTEL',
       description: 'where impeccable service and attention to detail create a stay beyond compare. Explore our world of refined indulgence and make yourself at home in style.',
     },
  
@@ -69,37 +69,42 @@ const Slideshow = () => {
 
   return (
     <>
-    <div className="relative w-full h-96 md:h-screen mt-4 flex content-end justify-center" id="home">
+    <div className="relative w-full h-96 md:h-screen   flex content-end justify-center" id="home">
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute w-full h-full opacity-0 transition-opacity duration-1000 ${
+          className={`absolute w-full h-full opacity-0 transition-opacity bg-fixed ${
             index === currentSlide ? 'opacity-100' : ''
           }`}
           style={{ backgroundImage: `url(${slide.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-r from-Teal bg-opacity-70">
-            <div className={`text-white text-left mt-4 sm:text-[2.5rem] text-[1.825rem]  font-bold ${index === currentSlide ? 'text-2xl md:text-2xl' : 'text-2xl md:text-2xl'}`}>{slide.text}</div>
-            <div className="text-white text-left font-extralight m-4">{slide.description}</div>
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-r from-Teal bg-opacity-70 text-left p-8">
+          <div className="text-left max-w-4xl p-8">
+            <div className="text-4xl text-white font-bold  mb-8 ">{slide.text}</div>
+            <div className="text-white text-left font-extralight mb-4"><i>{slide.description}</i></div>
             <button className="hover:bg-red-950 text-white text-xl font-bold py-2 px-4  absolute left-0 top-1/2 transform -translate-y-1/2 hidden sm:inline-block" onClick={prevSlide}>
               <Icon icon="ooui:arrow-previous-ltr" />
             </button>
             <button className="hover:bg-red-950 text-Teal text-xl font-bold py-2 px-4  absolute right-0 top-1/2 transform -translate-y-1/2 hidden sm:inline-block" onClick={nextSlide}>
               <Icon icon="ooui:arrow-next-ltr" />
             </button>
-            <button className="hover:bg-red-950 text-white font-bold py-2 px-4 border-solid border-2 border-white  rounded-full mt-4" onClick={() => console.log('Book a Room')}>
-              Book a Room
-            </button>
+            <div className="flex justify-left space-x-4">
+          <button className="bg-white text-Teal font-semibold py-2 px-4 rounded">Join Our rooms</button>
+          <button className="bg-green-500 text-white font-semibold py-2 px-4 rounded" id="about">Join Our Bar and Restrent</button>
+        </div>
+        </div>
           </div>
         </div>
       ))}
     </div>
 
-     <section className="pb-20 bg-blueGray-200  text-white bg-Teal" id="about">
+     <section className="pb-20 bg-blueGray-200  text-white bg-Teal" >
           <div className="container mx-auto px-4 ">
            
-            <p className='p-4 font-black text-xl text-center'>WELCOME TO</p>
-            <p className='p-4 font-black text-4xl text-center'>EMMAUS HOSTEL</p>
+          
+            <div className="sm:text-[2.5rem] text-[1.825rem] text-center font-bold mb-4">
+           About Us
+          </div>
 
             <p className='p-4 text-justify'>Emmaus Hostel is located at the entrance of Huye city, 
             in Huye district in the Southern province of Rwanda, near Huye stadium, just 50 minutes driving from the border of Burundi. 
