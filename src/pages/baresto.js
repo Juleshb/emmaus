@@ -90,7 +90,7 @@ const BarAndRestaurant = () => {
     console.log('Form Data:', bookingData); // Log the form data
   
     // Define the URL of the API endpoint
-    const apiUrl = 'http://localhost:4700/submit-restorent';
+    const apiUrl = 'https://emmausbe.onrender.com/submit-restorent';
   
     // Define the data to send to the API
     const formData = new FormData();
