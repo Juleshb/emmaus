@@ -95,7 +95,7 @@ const ConferenceRooms = () => {
     console.log('Form Data:', bookingData); // Log the form data
   
     // Define the URL of the API endpoint
-    const apiUrl = 'http://localhost:4700/submit-hall';
+    const apiUrl = 'https://emmausbe.onrender.com/submit-hall';
   
     // Define the data to send to the API
     const formData = new FormData();
