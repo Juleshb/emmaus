@@ -56,6 +56,91 @@ const ConferenceRooms = () => {
     setCurrentSlide((prevSlide) => (prevSlide === 0 ? rooms.length - 1 : prevSlide - 1));
   };
 
+
+
+
+  const [showPopup, setShowPopup] = useState(false);
+  const [sucsessPopup, setsucsessPopup] = useState(false);
+  const [bookingData, setBookingData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    checkInDate: '',
+    checkOutDate: '',
+    category: '',
+    otherRequest: ''
+  });
+
+  const handleBookNowClick = () => {
+    setShowPopup(true);
+    
+  };
+
+  const handleClosesucsessPopup = () => {
+    setsucsessPopup(false);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setBookingData({ ...bookingData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    console.log('Form Data:', bookingData); // Log the form data
+  
+    // Define the URL of the API endpoint
+    const apiUrl = 'http://localhost:4700/submit-hall';
+  
+    // Define the data to send to the API
+    const formData = new FormData();
+    formData.append('name', bookingData.name);
+    formData.append('email', bookingData.email);
+    formData.append('phone', bookingData.phone);
+    formData.append('checkInDate', bookingData.checkInDate);
+    formData.append('checkOutDate', bookingData.checkOutDate);
+    formData.append('category', bookingData.category);
+    formData.append('otherRequest', bookingData.otherRequest);
+  
+    // Make a POST request to the API endpoint
+    fetch(apiUrl, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      console.log('Form submitted successfully.');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      // Handle errors here
+    });
+    
+  
+    // Reset the form data
+    setBookingData({
+      name: '',
+      email: '',
+      phone: '',
+      checkInDate: '',
+      checkOutDate: '',
+      category: '',
+      otherRequest: ''
+    });
+  
+    // Close the popup
+    setShowPopup(false);
+    setsucsessPopup(true);
+  };
+  
+
   return (
     <>
       <Navigation />
@@ -95,7 +180,7 @@ const ConferenceRooms = () => {
                 <p>Booking:</p>
                 <p>Call us: (+250)788 865 736</p>
                 <p>Mail us: emmaushostel@gmail.com</p>
-                <button className="px-6 py-3 font-bold border border-solid border-white text-white bg-Teal rounded-lg mt-4 text-sm">
+                <button onClick={handleBookNowClick} className="px-6 py-3 font-bold border border-solid border-white text-white bg-Teal rounded-lg mt-4 text-sm">
                   Book Now
                 </button>
               </div>
@@ -103,6 +188,93 @@ const ConferenceRooms = () => {
           ))}
         </div>
       </div>
+      {showPopup && (
+              <div className="fixed mt-8 inset-0 z-50 flex  justify-center overflow-y-auto ">
+              <div className='items-center'>
+          <div className="bg-white p-6 rounded-lg shadow-xl border-dotted border-2 border-Teal ">
+            <h2 className="text-3xl font-bold mb-8 relative">
+              <button
+                className="absolute top-0 right-0  bg-white text-close rounded-lg hover:bg-Teal hover:text-white focus:outline-none focus:ring focus:ring-Teal focus:ring-opacity-50 "
+                onClick={handleClosePopup}
+              >
+                <Icon icon="material-symbols:close" />
+              </button>
+            </h2>
+            <h2 className="text-2xl font-bold mb-4  ">Conference Rooms Booking Form</h2>
+            <div className="max-w-sm mx-auto  px-8 pt-6 pb-8 mb-4">
+            <form onSubmit={handleSubmit}>
+                    <div className="mb-4">
+                      <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                      <input type="text" id="name" name="name" value={bookingData.name} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                      <input type="email" id="email" name="email" value={bookingData.email} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="phone" className="block text-gray-700 text-sm font-bold mb-2">Phone</label>
+                      <input type="text" id="phone" name="phone" value={bookingData.phone} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="checkInDate" className="block text-gray-700 text-sm font-bold mb-2">Check-in Date</label>
+                      <input type="date" id="checkInDate" name="checkInDate" value={bookingData.checkInDate} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="checkOutDate" className="block text-gray-700 text-sm font-bold mb-2">Check-out Date</label>
+                      <input type="date" id="checkOutDate" name="checkOutDate" value={bookingData.checkOutDate} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required />
+                    </div>
+                    <div className="mb-4">
+                       <label htmlFor="category" className="block text-gray-700 text-sm font-bold mb-2">Room type</label>
+                       <select id="category" name="category" value={bookingData.category} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" required>
+                       <option value="">Select Room category</option>
+                       <option value="Big">Big (100 peoples)</option>
+                       <option value="Moyenne">Moyenne (50 peoples)</option>
+                       <option value="Small 1">Small 1 (35 peoples)</option>
+                       <option value="Small 1">Small 2 (10 peoples)</option>
+                       </select>
+                       </div>
+                    <div className="mb-4">
+                   <label htmlFor="otherRequest" className="block text-gray-700 text-sm font-bold mb-2">Other request</label>
+                   <textarea id="otherRequest" name="otherRequest" value={bookingData.otherRequest} onChange={handleChange} className="border rounded-md px-4 py-2 w-full" />
+                   </div>
+
+
+
+                    <div className="flex justify-center">
+                      <button onClick={handleClosePopup} className="px-4 py-2 bg-orange-600 text-white rounded-lg mr-2">Cancel</button>
+                      <button type="submit" className="px-4 py-2 bg-Teal text-white rounded-lg">Book</button>
+                    </div>
+                  </form>
+            </div>
+          </div>
+          </div>
+        </div> 
+            )}
+
+            {sucsessPopup && (
+              <div className="fixed m-4 mt-8 inset-0 z-50 flex  justify-center overflow-y-auto ">
+              <div className='items-center'>
+          <div className="bg-green-100 p-6 rounded-lg  shadow-xl border-dotted border-2 border-green-400 ">
+            
+            <div className="text-Teal text-9xl text-center inline-flex items-center justify-center w-12 h-12 mb-2 ">
+            <Icon icon="line-md:bell-twotone-loop" />
+                    </div>
+            <h2 className="text-2xl text-green-700 font-bold mb-4  ">Your Room has well received</h2>
+            <p className='text-green-900'>We will get back to you soon for confirming your order. Thanks for booking with us!</p>
+            <div className="max-w-sm mx-auto  px-8 pt-6 pb-8 mb-4">
+
+
+            <div className="flex justify-center ">
+                      <button onClick={handleClosesucsessPopup} className="text-xl px-4 py-2 bg-green-400 text-white rounded-lg mr-2 items-center flex">
+                      <i className="mr-2"><Icon icon="line-md:confirm-circle" /></i>Okay</button>
+                    
+                    </div>
+            
+            </div>
+          </div>
+          </div>
+        </div> 
+            )}
       <Footer />
     </>
   );

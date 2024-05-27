@@ -55,7 +55,7 @@ const BarAndRestaurant = () => {
 
 
 
-    const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const [sucsessPopup, setsucsessPopup] = useState(false);
   const [bookingData, setBookingData] = useState({
     name: '',
