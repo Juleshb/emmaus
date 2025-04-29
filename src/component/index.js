@@ -8,6 +8,7 @@ import Facilities from "./facilities";
 import Contact from "./contact";
 import Footer from "./footer";
 import Halls from "./ourhall";
+import ReviewsSection from "./review";
 //import Home from "./component/kiki";
 
 
@@ -26,6 +27,7 @@ function Index() {
       <Restorent />
       <Conferancehall />
       <Halls />
+      <ReviewsSection />
       <Contact />
       <Footer />
      
